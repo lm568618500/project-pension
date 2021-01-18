@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.pay.wechat.mapper.PayWechatNotifyMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel,  
+		t.appid as appid,  
+		t.bank_type as bankType,  
+		t.cash_fee as cashFee,  
+		t.fee_type as feeType,  
+		t.is_subscribe as isSubscribe,  
+		t.mch_id as mchId,  
+		t.nonce_str as nonceStr,  
+		t.openid as openid,  
+		t.out_trade_no as outTradeNo,  
+		t.result_code as resultCode,  
+		t.return_code as returnCode,  
+		t.sign as sign,  
+		t.time_end as timeEnd,  
+		t.total_fee as totalFee,  
+		t.trade_type as tradeType,  
+		t.transaction_id as transactionId 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.pay.wechat.entity.dto.PayWechatNotifyDto" 
+		resultType="com.longjun.cto.framework.sm.pay.wechat.entity.view.PayWechatNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_wechat_notify AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.wechat.entity.view.PayWechatNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_wechat_notify AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.wechat.entity.view.PayWechatNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_wechat_notify AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_pay_wechat_notify AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_pay_wechat_notify set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

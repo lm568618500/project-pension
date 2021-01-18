@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonCityMapper">
+
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonCityDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonCityView">
+		SELECT
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.use_id as useId,  
+		t.name as name,  
+		t.province_id as provinceId,  
+		t.status as status ,
+		p.name as provinceName,
+		p.zipcode as zipcode
+		FROM t_common_city AS t
+		left join t_common_province as p 
+		on t.province_id = p.use_id
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_provinceName != null and c_provinceName != ''">
+		 	and p.name like concat('%', #{c_provinceName} , '%')
+		</if>
+		<if test="c_name != null and c_name != ''">
+		 	and t.name like concat('%', #{c_name} , '%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonCityView">
+		SELECT
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.use_id as useId,  
+		t.name as name,  
+		t.province_id as provinceId,  
+		t.status as status ,
+		p.name as provinceName,
+		p.zipcode as zipcode
+		FROM t_common_city AS t
+		left join t_common_province as p 
+		on t.province_id = p.use_id
+		WHERE 1=1 
+		and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonCityView">
+		SELECT
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.use_id as useId,  
+		t.name as name,  
+		t.province_id as provinceId,  
+		t.status as status ,
+		p.name as provinceName,
+		p.zipcode as zipcode
+		FROM t_common_city AS t
+		left join t_common_province as p 
+		on t.province_id = p.use_id
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_common_city AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_common_city set is_del = 1
+		 where id = #{id}
+	</update>
+	
+	
+	<select id="getCityByPId" parameterType="java.lang.String" 
+		resultType="java.util.Map">
+		SELECT  
+			t.use_id as useId,  
+			t.name as name
+		FROM t_common_city AS t
+		WHERE 1 = 1 and t.status = 1 and t.province_id=#{proviceId}
+	</select>
+	 
+</mapper>

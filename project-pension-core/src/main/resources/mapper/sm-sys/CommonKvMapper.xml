@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonKvMapper">
+ 
+	<select id="listByK" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonKvView">
+		 SELECT 
+		 a.`id` as id , 
+		 a.`time` as time , 
+		 a.`lastupdate` as lastupdate , 
+		 a.`status` as status , 
+		 a.`vtype` as vtype , 
+		 a.`mark` as mark , 
+		 a.`k` as k , 
+		 a.`v` as v 
+		 FROM t_common_kv AS a 
+		 where 1=1
+		 and a.k = #{k}
+	</select>
+	
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonKvDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonKvView">
+		 SELECT 
+		 a.`id` as id , 
+		 a.`time` as time , 
+		 a.`lastupdate` as lastupdate , 
+		 a.`status` as status , 
+		 a.`vtype` as vtype , 
+		 a.`mark` as mark , 
+		 a.`k` as k , 
+		 a.`v` as v 
+		 FROM t_common_kv AS a
+		 where 1=1
+		<if test="c_status != -10001">
+		 	and a.status =#{c_status}
+		</if>
+		<if test="c_k!=null and c_k!=''">
+		 	and a.k like concat('%',#{c_k},'%')
+		</if>
+		<if test="c_v!=null and c_v!=''">
+		 	and a.v like concat('%',#{c_v},'%')
+		</if>
+		order by a.time desc
+	</select>
+	
+</mapper>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.eims.cto.framework:framework-plugins-msg-sms:0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/eims/cto/framework/framework-plugins-msg-sms/0.0.1-SNAPSHOT/framework-plugins-msg-sms-0.0.1-20190531.030606-8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/eims/cto/framework/framework-plugins-msg-sms/0.0.1-SNAPSHOT/framework-plugins-msg-sms-0.0.1-20190531.030606-8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/eims/cto/framework/framework-plugins-msg-sms/0.0.1-SNAPSHOT/framework-plugins-msg-sms-0.0.1-20190531.030606-8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

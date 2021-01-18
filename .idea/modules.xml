@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/project-pension.iml" filepath="$PROJECT_DIR$/project-pension.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-pension-admin/project-pension-admin.iml" filepath="$PROJECT_DIR$/project-pension-admin/project-pension-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-pension-core/project-pension-core.iml" filepath="$PROJECT_DIR$/project-pension-core/project-pension-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-pension-web/project-pension-web.iml" filepath="$PROJECT_DIR$/project-pension-web/project-pension-web.iml" />
+    </modules>
+  </component>
+</project>

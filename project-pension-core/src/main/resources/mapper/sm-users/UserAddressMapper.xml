@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.users.mapper.UserAddressMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.user_id as userId,  
+		t.user_real_name as userRealName,  
+		t.user_telephone as userTelephone,  
+		t.zip_code as zipCode,  
+		t.province_id as provinceId,  
+		t.province_name as provinceName,  
+		t.city_id as cityId,  
+		t.city_name as cityName,  
+		t.area_id as areaId,  
+		t.area_name as areaName,  
+		t.address_detail as addressDetail,  
+		t.is_default as isDefault,  
+		t.is_del as isDel,  
+		t.lastupdate as lastupdate,  
+		t.time as time,  
+		t.status as status 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.users.entity.dto.UserAddressDto" 
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserAddressView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_user_address AS t
+		WHERE 1 = 1 
+			and is_del = 0
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_user_real_name != null and c_user_real_name != ''">
+		 	and t.user_real_name = #{c_user_real_name}
+		</if>
+		<if test="c_user_real_name != null and c_user_real_name != ''">
+		 	and t.user_real_name = #{c_user_real_name}
+		</if>
+		<if test="c_user_id != null and c_user_id != ''">
+		 	and t.user_id = #{c_user_id}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserAddressView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_user_address AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserAddressView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_user_address AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_user_address AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_user_address set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

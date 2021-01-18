@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.message.mapper.MessageSettingMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel,  
+		t.mech_id as mechId,  
+		t.setting_type as settingType,  
+		t.gatway_id as gatwayId,  
+		t.profile as profile 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.message.entity.dto.MessageSettingDto" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageSettingView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.lastupdate AS lastupdate,
+		  t.status AS STATUS,
+		  t.is_del AS isDel,
+		  t.mech_id AS mechId,
+		  t.setting_type AS settingType,
+		  t.gatway_id AS gatwayId,
+		  t.profile AS profile ,
+		  m.`mech_name` AS mechName, 
+		  g.`gatway_value` AS gatwayValue,
+		  g.`gatway_name` AS gatwayName
+		FROM
+		  t_message_setting AS t 
+		  LEFT JOIN `t_message_mech` AS m 
+		  ON t.`mech_id` = m.`id`
+		  LEFT JOIN `t_message_gatway` AS g 
+		  ON t.`gatway_id` = g.`id`
+		WHERE 1 = 1 and t.is_del = 0
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_mechName != null and c_mechName != ''">
+		 	and m.mech_name like concat('%', #{c_mechName}, '%')
+		</if>
+		<if test="c_gatwayName != null and c_gatwayName != ''">
+		 	and g.gatway_name like concat('%', #{c_gatwayName}, '%')
+		</if>
+		<if test="c_settingType != null and c_settingType != ''">
+		 	and t.setting_type like concat('%', #{c_settingType}, '%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageSettingView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.lastupdate AS lastupdate,
+		  t.status AS STATUS,
+		  t.is_del AS isDel,
+		  t.mech_id AS mechId,
+		  t.setting_type AS settingType,
+		  t.gatway_id AS gatwayId,
+		  t.profile AS profile ,
+		  m.`mech_name` AS mechName, 
+		  g.`gatway_value` AS gatwayValue,
+		  g.`gatway_name` AS gatwayName
+		FROM
+		  t_message_setting AS t 
+		  LEFT JOIN `t_message_mech` AS m 
+		  ON t.`mech_id` = m.`id`
+		  LEFT JOIN `t_message_gatway` AS g 
+		  ON t.`gatway_id` = g.`id`
+		WHERE 1 = 1 and t.is_del = 0
+		 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageSettingView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.lastupdate AS lastupdate,
+		  t.status AS STATUS,
+		  t.is_del AS isDel,
+		  t.mech_id AS mechId,
+		  t.setting_type AS settingType,
+		  t.gatway_id AS gatwayId,
+		  t.profile AS profile ,
+		  m.`mech_name` AS mechName, 
+		  g.`gatway_name` AS gatwayName,
+		  g.`gatway_value` AS gatwayValue
+		FROM
+		  t_message_setting AS t 
+		  LEFT JOIN `t_message_mech` AS m 
+		  ON t.`mech_id` = m.`id`
+		  LEFT JOIN `t_message_gatway` AS g 
+		  ON t.`gatway_id` = g.`id`
+		WHERE 1 = 1
+		<if test="c_status != null and c_status != ''">
+		 	and t.status =#{c_status}
+		</if>
+		
+		<if test="c_settingType != null and c_settingType != ''">
+		 	and t.setting_type =#{c_settingType}
+		</if>
+		<if test="c_gatwayId != null and c_gatwayId != ''">
+		 	and t.gatway_id =#{c_gatwayId}
+		</if>
+		<if test="c_limit != null">
+			limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_message_setting AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_message_setting set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

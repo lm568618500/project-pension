@@ -1,0 +1,924 @@
+2021-01-14 20:54:41.584 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:41.586 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:54:41.587 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:54:41.588 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.590 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:54:41.590 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:54:41.591 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.593 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:54:41.593 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:41.594 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.595 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:54:41.596 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.596 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.598 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:54:41.599 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:54:41.600 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.602 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:54:41.603 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.603 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.605 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:54:41.606 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.606 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.608 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:54:41.608 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.609 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.611 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:54:41.611 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:41.613 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:54:41.615 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 1(Long)
+2021-01-14 20:54:41.615 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:54:41.616 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:41.619 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Long), 1(Integer), 0(Integer)
+2021-01-14 20:54:41.619 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:41.620 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:41.622 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 4(Long), 1(Integer), 0(Integer)
+2021-01-14 20:54:41.622 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:54:41.623 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_two_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:41.625 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 4(Long), 1(Integer), 0(Integer)
+2021-01-14 20:54:41.626 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:54:41.648 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:41.648 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:41.651 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:54:41.652 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:54:41.653 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:54:41.653 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.654 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:54:41.655 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.655 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:54:41.656 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:54:41.656 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:54:41.657 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.657 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:54:41.658 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.658 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:54:41.659 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:41.659 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:54:41.660 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.660 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:41.660 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.661 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:54:41.662 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.662 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:54:41.662 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.663 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.663 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.664 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:54:41.665 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:54:41.665 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:54:41.666 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.666 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:54:41.666 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.668 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:54:41.668 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:54:41.668 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.669 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.669 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.669 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.671 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:54:41.671 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:54:41.671 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.672 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.672 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.672 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.674 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:54:41.674 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:54:41.675 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.675 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:41.675 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.675 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:41.677 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:54:41.677 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:54:41.678 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:41.678 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:41.680 DEBUG com.longjun.cto.framework.sm.cms.mapper.ImageMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,uuid,`size`,content_type AS contentType,original_name AS originalName,suffix,store_path AS storePath,url,width,height,thumbnail_id AS thumbnailId,`time`,lastupdate,`status` FROM t_image WHERE (uuid = ?) 
+2021-01-14 20:54:41.680 DEBUG com.longjun.cto.framework.sm.cms.mapper.ImageMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,uuid,`size`,content_type AS contentType,original_name AS originalName,suffix,store_path AS storePath,url,width,height,thumbnail_id AS thumbnailId,`time`,lastupdate,`status` FROM t_image WHERE (uuid = ?) 
+2021-01-14 20:54:41.682 DEBUG com.longjun.cto.framework.sm.cms.mapper.ImageMapper.selectList Line:159 -
+				==> Parameters: a448f9749dc14646859a7f7a0456d25f(String)
+2021-01-14 20:54:41.682 DEBUG com.longjun.cto.framework.sm.cms.mapper.ImageMapper.selectList Line:159 -
+				==> Parameters: a76d13e661384894aee530cfb3b26be5(String)
+2021-01-14 20:54:41.682 DEBUG com.longjun.cto.framework.sm.cms.mapper.ImageMapper.selectList Line:159 -
+				<==      Total: 1
+2021-01-14 20:54:41.682 DEBUG com.longjun.cto.framework.sm.cms.mapper.ImageMapper.selectList Line:159 -
+				<==      Total: 1
+2021-01-14 20:54:43.816 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:43.818 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:54:43.819 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:54:43.820 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:43.822 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:54:43.822 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:54:43.823 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:43.825 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:54:43.825 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:43.826 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:43.828 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:54:43.828 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:43.829 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:43.831 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:54:43.831 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:54:43.832 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:43.834 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:54:43.835 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:43.836 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:43.838 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:54:43.838 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:43.839 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:43.841 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:54:43.841 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:54:43.842 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:54:43.843 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:54:43.844 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:54:43.846 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:54:43.847 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 3(Long)
+2021-01-14 20:54:43.848 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:54:43.849 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:43.851 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 3(Long), 1(Integer), 0(Integer)
+2021-01-14 20:54:43.852 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:54:43.853 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:43.854 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 11(Long), 1(Integer), 0(Integer)
+2021-01-14 20:54:43.855 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:54:43.856 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,three_parent_id AS threeParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_four WHERE (three_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:43.857 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				==> Parameters: 17(Long), 1(Integer), 0(Integer)
+2021-01-14 20:54:43.858 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:54:43.858 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_three_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:54:43.860 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 17(Long), 1(Integer), 0(Integer)
+2021-01-14 20:54:43.861 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:07.223 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:07.225 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:55:07.226 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:55:07.227 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:07.229 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:55:07.229 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:07.230 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:07.232 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:55:07.233 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:07.234 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:07.237 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:55:07.237 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:07.238 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:07.240 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:55:07.241 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:07.242 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:07.244 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:55:07.244 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:07.245 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:07.247 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:55:07.247 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:07.248 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:07.251 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:55:07.252 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:07.252 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:07.254 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:55:07.255 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:07.257 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:55:07.259 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 1(Long)
+2021-01-14 20:55:07.260 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:55:07.261 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:07.263 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:07.263 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:07.264 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:07.266 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 4(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:07.267 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:07.268 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_two_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:07.270 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 4(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:07.271 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:08.926 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:08.929 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:55:08.930 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:55:08.930 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:08.933 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:55:08.933 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:08.934 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:08.937 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:55:08.937 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:08.938 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:08.940 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:55:08.941 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:08.941 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:08.944 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:55:08.944 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:08.945 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:08.947 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:55:08.948 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:08.948 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:08.950 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:55:08.951 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:08.952 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:08.954 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:55:08.954 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:08.956 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:08.957 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:55:08.958 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:08.959 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:55:08.962 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 7(Long)
+2021-01-14 20:55:08.962 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:55:08.962 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:08.965 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 7(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:08.965 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:08.965 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:08.967 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 22(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:08.968 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:08.969 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_two_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:08.970 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 22(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:08.971 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:10.408 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:10.410 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:55:10.411 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:55:10.412 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:10.413 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:55:10.414 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:10.415 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:10.417 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:55:10.418 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:10.419 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:10.421 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:55:10.421 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:10.422 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:10.424 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:55:10.425 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:10.425 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:10.427 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:55:10.428 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:10.429 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:10.431 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:55:10.432 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:10.432 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:10.435 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:55:10.435 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:10.436 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:10.438 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:55:10.438 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:10.440 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:55:10.442 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 2(Long)
+2021-01-14 20:55:10.442 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:55:10.443 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:10.445 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 2(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:10.446 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:10.446 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:10.448 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 8(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:10.450 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:10.451 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,three_parent_id AS threeParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_four WHERE (three_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:10.453 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				==> Parameters: 9(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:10.453 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:10.454 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_three_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:10.456 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 9(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:10.456 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:11.711 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:11.713 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:55:11.714 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:55:11.714 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:11.716 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:55:11.718 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:11.718 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:11.720 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:55:11.721 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:11.722 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:11.723 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:55:11.724 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:11.724 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:11.726 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:55:11.727 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:11.727 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:11.729 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:55:11.730 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:11.730 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:11.732 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:55:11.733 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:11.734 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:11.736 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:55:11.736 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:11.737 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:11.739 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:55:11.740 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:11.742 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:55:11.744 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 3(Long)
+2021-01-14 20:55:11.744 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:55:11.746 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:11.748 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 3(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:11.749 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:11.749 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:11.752 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 11(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:11.753 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:11.754 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,three_parent_id AS threeParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_four WHERE (three_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:11.756 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				==> Parameters: 17(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:11.757 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:11.758 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_three_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:11.760 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 17(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:11.760 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:12.286 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.288 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:55:12.289 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:55:12.289 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.291 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:55:12.292 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:12.293 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.295 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:55:12.295 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:12.296 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.298 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:55:12.298 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.299 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.301 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:55:12.302 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:12.303 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.305 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:55:12.305 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.317 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.319 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:55:12.319 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.320 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.322 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:55:12.322 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.323 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.325 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:55:12.325 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:12.327 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:55:12.329 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 2(Long)
+2021-01-14 20:55:12.329 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:55:12.330 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.332 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 2(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:12.333 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.334 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.336 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 8(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:12.336 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:12.337 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,three_parent_id AS threeParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_four WHERE (three_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.339 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				==> Parameters: 9(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:12.339 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:12.340 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_three_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.342 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 9(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:12.342 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:12.798 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.800 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:55:12.801 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:55:12.802 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.804 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:55:12.805 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:12.806 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.807 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:55:12.808 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:12.809 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.811 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:55:12.811 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.812 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.813 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:55:12.814 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:12.815 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.817 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:55:12.818 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.818 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.820 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:55:12.821 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.821 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.823 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:55:12.823 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:12.823 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:12.826 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:55:12.827 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:12.828 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:55:12.831 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 1(Long)
+2021-01-14 20:55:12.831 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:55:12.832 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.834 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:12.835 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:12.835 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.837 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 4(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:12.838 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:12.839 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_two_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:12.840 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 4(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:12.850 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:13.910 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:13.912 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:55:13.912 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:55:13.913 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:13.915 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:55:13.916 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:13.917 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:13.919 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:55:13.919 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:13.920 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:13.922 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:55:13.923 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:13.923 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:13.925 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:55:13.926 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:13.926 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:13.929 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:55:13.929 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:13.930 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:13.932 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:55:13.932 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:13.933 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:13.936 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:55:13.936 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:13.937 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:13.939 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:55:13.939 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:13.941 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:55:13.943 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 7(Long)
+2021-01-14 20:55:13.943 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:55:13.944 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:13.946 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 7(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:13.946 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:13.947 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:13.949 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 22(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:13.949 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:13.950 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_two_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:13.952 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 22(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:13.953 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:20.815 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE (status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:20.818 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer)
+2021-01-14 20:55:20.819 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectList Line:159 -
+				<==      Total: 8
+2021-01-14 20:55:20.820 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:20.822 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 7(Long)
+2021-01-14 20:55:20.823 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:20.823 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:20.825 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 1(Long)
+2021-01-14 20:55:20.826 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:20.827 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:20.829 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 2(Long)
+2021-01-14 20:55:20.829 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:20.830 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:20.832 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 3(Long)
+2021-01-14 20:55:20.832 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 2
+2021-01-14 20:55:20.833 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:20.835 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 4(Long)
+2021-01-14 20:55:20.836 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:20.837 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:20.839 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 5(Long)
+2021-01-14 20:55:20.839 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:20.840 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:20.842 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 6(Long)
+2021-01-14 20:55:20.842 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 3
+2021-01-14 20:55:20.843 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (status = ? AND is_del = ? AND parent_one_id = ?) ORDER BY sort 
+2021-01-14 20:55:20.844 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 1(Integer), 0(Integer), 8(Long)
+2021-01-14 20:55:20.844 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 4
+2021-01-14 20:55:20.846 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==>  Preparing: SELECT id AS id,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,image,image_banner AS imageBanner,`time`,lastupdate,`status` FROM t_new_type_one WHERE id=? 
+2021-01-14 20:55:20.848 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				==> Parameters: 7(Long)
+2021-01-14 20:55:20.848 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeOneMapper.selectById Line:159 -
+				<==      Total: 1
+2021-01-14 20:55:20.850 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,parent_one_id AS parentOneId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_two WHERE (parent_one_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:20.852 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				==> Parameters: 7(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:20.853 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeTwoMapper.selectList Line:159 -
+				<==      Total: 6
+2021-01-14 20:55:20.853 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,one_parent_id AS oneParentId,two_parent_id AS twoParentId,`name`,name_en AS nameEn,is_del AS isDel,breaks,sort,`time`,lastupdate,`status` FROM t_new_type_three WHERE (two_parent_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:20.855 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				==> Parameters: 22(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:20.856 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewTypeThreeMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-14 20:55:20.856 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,type_one_id AS typeOneId,type_two_id AS typeTwoId,type_three_id AS typeThreeId,type_four_id AS typeFourId,`name`,name_en AS nameEn,conten,conten_en AS contenEn,video,images,images_list AS imagesList,is_del AS isDel,sort,relation_id AS relationId,`time`,lastupdate,`status` FROM t_news WHERE (type_two_id = ? AND status = ? AND is_del = ?) ORDER BY sort 
+2021-01-14 20:55:20.858 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				==> Parameters: 22(Long), 1(Integer), 0(Integer)
+2021-01-14 20:55:20.858 DEBUG com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper.selectList Line:159 -
+				<==      Total: 0

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonProvinceMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.use_id as useId,  
+		t.name as name,  
+		t.zipcode as zipcode,  
+		t.status as status 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonProvinceDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonProvinceView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_common_province AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_name != null and c_name != ''">
+		 	and t.name like concat('%', #{c_name} , '%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonProvinceView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_common_province AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonProvinceView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_common_province AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+		
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonProvinceView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_common_province AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_common_province set is_del = 1
+		 where id = #{id}
+	</update>
+	
+	<select id="getProvice" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonProvinceDto" 
+		resultType="java.util.Map">
+		SELECT  
+			t.use_id as useId,  
+			t.name as name
+		FROM t_common_province AS t
+		WHERE 1 = 1 and t.status = 1
+	</select>
+	 
+</mapper>

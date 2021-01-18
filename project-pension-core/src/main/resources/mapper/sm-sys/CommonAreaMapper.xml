@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonAreaMapper">
+
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonAreaDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonAreaView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.lastupdate AS lastupdate,
+		  t.use_id AS useId,
+		  t.name AS NAME,
+		  t.city_id AS cityId,
+		  t.status AS STATUS ,
+		  c.`name` AS  cityName,
+		  p.`use_id` AS provinceId,
+		  p.`name` AS provinceName
+		FROM
+		  t_common_area AS t 
+		  LEFT JOIN t_common_city AS c
+		  ON t.`city_id` = c.`use_id`
+		  LEFT JOIN t_common_province AS p 
+		  ON c.`province_id` = p.`use_id`
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_name != null and c_name != ''">
+		 	and t.name like concat('%' ,#{c_name} , '%')
+		</if>
+		<if test="c_cityName != null and c_cityName != ''">
+		 	and c.name like concat('%' ,#{c_cityName} , '%')
+		</if>
+		<if test="c_provinceName != null and c_provinceName != ''">
+		 	and p.name like  concat('%' ,#{c_provinceName} , '%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonAreaView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.lastupdate AS lastupdate,
+		  t.use_id AS useId,
+		  t.name AS NAME,
+		  t.city_id AS cityId,
+		  t.status AS STATUS ,
+		  c.`name` AS  cityName,
+		  p.`use_id` AS provinceId,
+		  p.`name` AS provinceName
+		FROM
+		  t_common_area AS t 
+		  LEFT JOIN t_common_city AS c
+		  ON t.`city_id` = c.`use_id`
+		  LEFT JOIN t_common_province AS p 
+		  ON c.`province_id` = p.`use_id`
+		WHERE 1 = 1 
+		and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonAreaView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.lastupdate AS lastupdate,
+		  t.use_id AS useId,
+		  t.name AS NAME,
+		  t.city_id AS cityId,
+		  t.status AS STATUS ,
+		  c.`name` AS  cityName,
+		  p.`use_id` AS provinceId,
+		  p.`name` AS provinceName
+		FROM
+		  t_common_area AS t 
+		  LEFT JOIN t_common_city AS c
+		  ON t.`city_id` = c.`use_id`
+		  LEFT JOIN t_common_province AS p 
+		  ON c.`province_id` = p.`use_id`
+		WHERE 1 = 1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+		
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_common_area AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_common_area set is_del = 1
+		 where id = #{id}
+	</update>
+	
+	<select id="getAreaByCId" parameterType="java.lang.String" 
+		resultType="java.util.Map">
+		SELECT  
+			t.use_id as useId,  
+			t.name as name
+		FROM t_common_area AS t
+		WHERE 1 = 1 and t.status = 1 and t.city_id=#{cityId}
+	</select>
+	 
+</mapper>

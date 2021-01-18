@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonBanksMapper">
+
+	<!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.longjun.cto.framework.sm.sys.entity.view.CommonBanksView">
+		<id column="id" property="id" />
+		<result column="time" property="time" />
+		<result column="bank_code" property="bankCode" />
+		<result column="bank_name" property="bankName" />
+		<result column="bank_logo" property="bankLogo" />
+		<result column="sort" property="sort" />
+		<result column="lastupdate" property="lastupdate" />
+		<result column="status" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		id,  
+		time,  
+		bank_code,  
+		bank_name,  
+		bank_logo,  
+		sort,  
+		lastupdate,  
+		status ,
+		cash ,
+		withdraw 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonBanksDto" 
+		resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_common_banks AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		
+		<if test="c_cash != -10001">
+		 	and t.cash =#{c_cash}
+		</if>
+		
+		<if test="c_withdraw != -10001">
+		 	and t.withdraw =#{c_withdraw}
+		</if>
+		
+		<if test="c_codeOrName != null and c_codeOrName != ''">
+			and t.bank_code like concat('%',#{c_codeOrName},'%')
+			or t.bank_name like concat('%',#{c_codeOrName},'%')
+		</if>
+		 
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+		
+	</select>
+	 
+</mapper>

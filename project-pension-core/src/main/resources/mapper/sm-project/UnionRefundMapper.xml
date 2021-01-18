@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.pay.union.mapper.UnionRefundMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.status as status,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.is_del as isDel,  
+		t.mer_id as merId,  
+		t.order_no as orderNo,  
+		t.qrtype as qrtype,  
+		t.query_id as queryId,  
+		t.cleardate as cleardate,  
+		t.bank_trace as bankTrace,  
+		t.refund_amt as refundAmt,  
+		t.refund_no as refundNo,  
+		t.sub_orders as subOrders,  
+		t.platform_amount as platformAmount,  
+		t.refund_desc as refundDesc,  
+		t.mac as mac,  
+		t.req_url as reqUrl,  
+		t.resp as resp 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.pay.union.entity.dto.UnionRefundDto" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionRefundView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_refund AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionRefundView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_refund AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionRefundView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_refund AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_union_refund AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_union_refund set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

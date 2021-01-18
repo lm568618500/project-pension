@@ -1,0 +1,65 @@
+package com.longjun.cto.framework.sm.sys.mapper;
+
+import com.eims.cto.framework.module.base.model.BaseDTO;
+import com.longjun.cto.framework.sm.sys.entity.dto.CommonCityDto;
+import com.longjun.cto.framework.sm.sys.entity.dto.CommonCityModifyDto;
+import com.longjun.cto.framework.sm.sys.entity.dto.CommonProvinceDto;
+import com.longjun.cto.framework.sm.sys.entity.model.CommonCityModel;
+import com.longjun.cto.framework.sm.sys.entity.view.CommonCityView;
+import com.eims.cto.framework.common.core.mybatis.IMapper;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import org.apache.ibatis.annotations.Param;
+
+/**
+ * CommonCity Mapper
+ * @author yangxuan
+ * @date 2019-04-04 06:13:35
+ */
+public interface CommonCityMapper extends IMapper<CommonCityModel> {
+
+	/**
+	 * 通过ID查询
+	 * @param id
+	 * @return
+	 */
+	CommonCityView findViewById(@Param("id")long id);
+	
+	/**
+	 *  分页查询
+	 * @param id
+	 * @return
+	 */
+	List<CommonCityView> getByPage(CommonCityDto dto);
+	
+	/**
+	 *  条件
+	 * @param id
+	 * @return
+	 */
+	List<CommonCityView> listModelMap(Map<String,Object> params);
+	
+	/**
+	 *  条件总数
+	 * @param id
+	 * @return
+	 */
+	int countMap(Map<String,Object> params);
+	
+	/**
+	 * 软删除
+	 * @param id
+	 * @return
+	 */
+	int del(@Param("id")long id);
+	
+	/**
+	 *  通用API接口查询全部
+	 * @param id
+	 * @return
+	 */
+	List<Map<String,Object>> getCityByPId(String proviceId);
+	
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.pay.mapper.PayMchNotifyMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.order_id as orderId,  
+		t.mch_id as mchId,  
+		t.mch_order_no as mchOrderNo,  
+		t.order_type as orderType,  
+		t.notify_url as notifyUrl,  
+		t.notify_count as notifyCount,  
+		t.result as result,  
+		t.lastupdate as lastupdate,  
+		t.status as status 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.pay.entity.dto.PayMchNotifyDto" 
+		resultType="com.longjun.cto.framework.sm.pay.entity.view.PayMchNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_mch_notify AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.entity.view.PayMchNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_mch_notify AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.entity.view.PayMchNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_mch_notify AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		limit 0,#{c_limit}
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.entity.view.PayMchNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_mch_notify AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	 
+</mapper>

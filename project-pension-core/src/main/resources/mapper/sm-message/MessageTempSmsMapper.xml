@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.message.mapper.MessageTempSmsMapper">
+
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.message.entity.dto.MessageTempSmsDto" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageTempSmsView">
+		SELECT
+			  t.id AS id,
+			  t.time AS TIME,
+			  t.mech_id AS mechId,
+			  t.temp_uid AS tempUid,
+			  t.other_template_id AS otherTemplateId,
+			  t.sms_content AS smsContent,
+			  t.status AS STATUS,
+			  t.immediately AS immediately,
+			  t.lastupdate AS lastupdate,
+			  t.tips AS tips ,
+			  m.`mech_name` AS mechName , 
+			  m.`lock_status` AS mechLockStatus,
+			  mt.`temp_name` AS tempName,
+			  m.`support_email` AS mechSupportEmail , 
+			  m.`support_sms` AS mechSupportSms,
+			  m.`support_push` AS mechSupportPush
+		FROM
+			  t_message_temp_sms AS t 
+			  LEFT JOIN t_message_mech AS m 
+			  ON t.`mech_id` = m.`id`
+			  LEFT JOIN `t_message_temp` AS mt
+			  ON t.`temp_uid` = mt.`temp_uid`
+			WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_tempName != null and c_tempName !=''">
+		 	and mt.`temp_name` like concat('%', #{c_tempName} ,'%')
+		</if>
+		<if test="c_otherTemplateId != null and c_otherTemplateId !=''">
+		 	and t.other_template_id like concat('%', #{c_otherTemplateId} ,'%')
+		</if>
+		<if test="c_smsContent != null and c_smsContent !=''">
+		 	and t.sms_content like concat('%', #{c_smsContent} ,'%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageTempSmsView">
+		
+		SELECT
+			  t.id AS id,
+			  t.time AS TIME,
+			  t.mech_id AS mechId,
+			  t.temp_uid AS tempUid,
+			  t.other_template_id AS otherTemplateId,
+			  t.sms_content AS smsContent,
+			  t.status AS STATUS,
+			  t.immediately AS immediately,
+			  t.lastupdate AS lastupdate,
+			  t.tips AS tips ,
+			  m.`mech_name` AS mechName , 
+			  m.`lock_status` AS mechLockStatus,
+			  mt.`temp_name` AS tempName,
+			  m.`support_email` AS mechSupportEmail , 
+			  m.`support_sms` AS mechSupportSms,
+			  m.`support_push` AS mechSupportPush
+		FROM
+			  t_message_temp_sms AS t 
+			  LEFT JOIN t_message_mech AS m 
+			  ON t.`mech_id` = m.`id`
+			  LEFT JOIN `t_message_temp` AS mt
+			  ON t.`temp_uid` = mt.`temp_uid`
+			WHERE 1 = 1
+		and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageTempSmsView">
+		SELECT
+			  t.id AS id,
+			  t.time AS TIME,
+			  t.mech_id AS mechId,
+			  t.temp_uid AS tempUid,
+			  t.other_template_id AS otherTemplateId,
+			  t.sms_content AS smsContent,
+			  t.status AS STATUS,
+			  t.immediately AS immediately,
+			  t.lastupdate AS lastupdate,
+			  t.tips AS tips ,
+			  m.`mech_name` AS mechName , 
+			  m.`lock_status` AS mechLockStatus,
+			  mt.`temp_name` AS tempName,
+			  m.`support_email` AS mechSupportEmail , 
+			  m.`support_sms` AS mechSupportSms,
+			  m.`support_push` AS mechSupportPush
+		FROM
+			  t_message_temp_sms AS t 
+			  LEFT JOIN t_message_mech AS m 
+			  ON t.`mech_id` = m.`id`
+			  LEFT JOIN `t_message_temp` AS mt
+			  ON t.`temp_uid` = mt.`temp_uid`
+			WHERE 1 = 1
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+			limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_message_temp_sms AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_message_temp_sms set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

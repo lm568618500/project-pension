@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.project.pension.finance.mapper.NewTypeFourMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.one_parent_id as oneParentId,  
+		t.two_parent_id as twoParentId,  
+		t.three_parent_id as threeParentId,  
+		t.name as name,
+		t.name_en as nameEn,
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel,  
+		t.breaks as breaks,
+		t.sort as sort 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.project.pension.finance.entity.dto.NewTypeFourDto" 
+		resultType="com.longjun.cto.framework.project.pension.finance.entity.view.NewTypeFourView">
+		SELECT
+			<include refid="Base_Column_List" />
+		,(select name from t_new_type_one where id=t.one_parent_id) as parentOneName
+		,(select name from t_new_type_two where id=t.two_parent_id) as parentTwoName
+		,(select name from t_new_type_three where id=t.three_parent_id) as parentThreeName
+		FROM t_new_type_four AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_name!=null and c_name!=''">
+			AND t.name LIKE concat(concat('%',#{c_name}),'%')
+		</if>
+		<if test="c_parent_one_id != -10001">
+			and t.one_parent_id = #{c_parent_one_id}
+		</if>
+		<if test="c_parent_two_id != -10001">
+			and t.two_parent_id = #{c_parent_two_id}
+		</if>
+		<if test="c_parent_three_id != -10001">
+			and t.three_parent_id = #{c_parent_three_id}
+		</if>
+		<if test="c_parent_four_id != -10001">
+			and t.id = #{c_parent_four_id}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+		order by sort
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.project.pension.finance.entity.view.NewTypeFourView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_new_type_four AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.project.pension.finance.entity.view.NewTypeFourView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_new_type_four AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_new_type_four AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_new_type_four set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

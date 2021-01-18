@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.message.mapper.MessageStationMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel,  
+		t.user_no as userNo,  
+		t.send_time as sendTime,  
+		t.send_timestamp as sendTimestamp,  
+		t.content as content,  
+		t.creator as creator,  
+		t.title as title,  
+		t.is_read as isRead 
+    </sql>
+
+	<select id="getMngByPage" parameterType="com.longjun.cto.framework.sm.message.entity.dto.MessageStationDto"
+			resultType="com.longjun.cto.framework.sm.message.entity.view.MessageStationView">
+		SELECT
+		t.id as id,
+		t.time as time,
+		t.lastupdate as lastupdate,
+		t.status as status,
+		t.is_del as isDel,
+		t.user_no as userNo,
+		t.send_time as sendTime,
+		t.send_timestamp as sendTimestamp,
+		t.content as content,
+		t.creator as creator,
+		t.title as title,
+		t.is_read as isRead
+		FROM
+		t_message_station AS t
+		WHERE
+		1 = 1
+		AND t.is_del = 0
+		<if test="c_status != -10001">
+			and t.status = #{c_status}
+		</if>
+		<if test="c_userNo != null and c_userNo != ''">
+			and t.user_no = #{c_userNo}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+			and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+		order by id desc
+	</select>
+
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.message.entity.dto.MessageStationDto" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageStationView">
+		SELECT
+			t.id AS id,
+			t.time AS time,
+			t.lastupdate AS lastupdate,
+			t.STATUS AS STATUS,
+			t.is_del AS isDel,
+			t.user_no AS userNo,
+			t.send_time AS sendTime,
+			t.send_timestamp AS sendTimestamp,
+			t.content AS content,
+			t.creator AS creator,
+			t.title AS title,
+			t.is_read AS isRead ,
+			u.user_name as userName , 
+			u.mobile as userMobile,
+			u.real_name as userRealName
+			
+		FROM
+			t_message_station AS t 
+			left join t_user as u 
+			on t.user_no = u.user_no
+		WHERE
+			1 = 1 
+			AND t.is_del = 0 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_userNo != null and c_userNo != ''">
+		 	and t.user_no = #{c_userNo}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+		order by id desc
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageStationView">
+		SELECT
+			t.id AS id,
+			t.time AS time,
+			t.lastupdate AS lastupdate,
+			t.STATUS AS STATUS,
+			t.is_del AS isDel,
+			t.user_no AS userNo,
+			t.send_time AS sendTime,
+			t.send_timestamp AS sendTimestamp,
+			t.content AS content,
+			t.creator AS creator,
+			t.title AS title,
+			t.is_read AS isRead ,
+			u.user_name as userName , 
+			u.mobile as userMobile,
+			u.real_name as userRealName
+			
+		FROM
+			t_message_station AS t 
+			left join t_user as u 
+			on t.user_no = u.user_no
+		WHERE
+			1 = 1 
+			AND t.is_del = 0  and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageStationView">
+		SELECT
+			t.id AS id,
+			t.time AS time,
+			t.lastupdate AS lastupdate,
+			t.STATUS AS STATUS,
+			t.is_del AS isDel,
+			t.user_no AS userNo,
+			t.send_time AS sendTime,
+			t.send_timestamp AS sendTimestamp,
+			t.content AS content,
+			t.creator AS creator,
+			t.title AS title,
+			t.is_read AS isRead ,
+			u.user_name as userName , 
+			u.mobile as userMobile,
+			u.real_name as userRealName
+			
+		FROM
+			t_message_station AS t 
+			left join t_user as u 
+			on t.user_no = u.user_no
+		WHERE
+			1 = 1 
+			AND t.is_del = 0 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_userNo != null and c_userNo != ''">
+		 	and t.user_no =#{c_userNo}
+		</if>
+		<if test="c_is_read != null and c_is_read != ''">
+		 	and t.is_read =#{c_is_read}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_message_station AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_message_station set is_del = 1
+		 where id = #{id}
+	</update>
+
+
+	<update id="updateByUserNo" parameterType="java.lang.Long">
+		 update t_message_station set is_read = 1
+		 where is_del=0 and is_read=1 and  user_no = #{userNo}
+	</update>
+
+
+</mapper>

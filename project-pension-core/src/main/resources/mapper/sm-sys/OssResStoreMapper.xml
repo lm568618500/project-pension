@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.OssResStoreMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel,  
+		t.res_href as resHref,  
+		t.res_name as resName,  
+		t.res_suf as resSuf,  
+		t.set_id as setId 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.OssResStoreDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.OssResStoreView">
+		SELECT
+			t.*,t2.set_name as setName
+		FROM t_oss_res_store AS t
+		LEFT JOIN
+		t_oss_res_setting t2
+		on t.set_id = t2.id
+		WHERE 1 = 1 and t.is_del = 0 
+		<if test="setName != null and setName != ''">
+		 	and t2.set_name like concat('%', #{setName} , '%')
+		</if>
+		<if test="setId != null">
+		 	and t2.p_id = #{setId}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.OssResStoreView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_oss_res_store AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.OssResStoreView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_oss_res_store AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_oss_res_store AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_oss_res_store set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

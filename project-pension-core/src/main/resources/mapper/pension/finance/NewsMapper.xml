@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.project.pension.finance.mapper.NewsMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.type_one_id as typeOneId,
+		t.type_two_id as typeTwoId,  
+		t.type_three_id as typeThreeId,
+		t.type_four_id as typeFourId,
+		t.name as name,
+		t.name_en as nameEn,
+		t.describes as describes,
+		t.describe_en as describeEn,
+		t.conten as conten,  
+		t.conten_en as contenEn,
+		t.video as video,
+		t.images as images,  
+		t.images_list as imagesList,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel,  
+		t.sort as sort,  
+		t.relation_id as relationId 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.project.pension.finance.entity.dto.NewsDto" 
+		resultType="com.longjun.cto.framework.project.pension.finance.entity.view.NewsView">
+		SELECT
+			<include refid="Base_Column_List" />
+		,(select name from t_new_type_one where id=t.type_one_id) as parentOneName
+		,(select name from t_new_type_two where id=t.type_two_id) as parentTwoName
+		,(select name from t_new_type_three where id=t.type_three_id) as parentThreeName
+		,(select name from t_new_type_four where id=t.type_four_id) as parentFourName
+		FROM t_news AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_name!=null and c_name!=''">
+			AND t.name LIKE concat(concat('%',#{c_name}),'%')
+		</if>
+		<if test="c_parent_one_id != -10001">
+			and t.type_one_id = #{c_parent_one_id}
+		</if>
+		<if test="c_parent_two_id != -10001">
+			and t.type_two_id = #{c_parent_two_id}
+		</if>
+		<if test="c_parent_three_id != -10001">
+			and t.type_three_id = #{c_parent_three_id}
+		</if>
+		<if test="c_parent_four_id != -10001">
+			and t.type_four_id = #{c_parent_four_id}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.project.pension.finance.entity.view.NewsView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_news AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.project.pension.finance.entity.view.NewsView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_news AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_news AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_news set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

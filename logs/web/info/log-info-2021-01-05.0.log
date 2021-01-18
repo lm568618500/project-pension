@@ -1,0 +1,240 @@
+2021-01-05 09:25:28.707 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 09:25:28.725 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 09:25:28.755 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 09:25:30.746 DEBUG com.longjun.cto.framework.project.pension.userManagement.mapper.UsersMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,photo,`name`,real_name AS realName,mobile,admin_id AS adminId,audit_status AS auditStatus,remarks,is_del AS isDel,user_grade_id AS userGradeId,user_type AS userType,user_card_id AS userCardId,user_email AS userEmail,audit_time AS auditTime,audit_remarks AS auditRemarks,login_name AS loginName,`password`,country,province,city,district,address,company_en_name AS companyEnName,company_en_address AS companyEnAddress,legal_representative AS legalRepresentative,enterprise_cn_contact AS enterpriseCnContact,enterprise_en_contact AS enterpriseEnContact,enterprise_fax AS enterpriseFax,contact_line AS contactLine,post_code AS postCode,business_license AS businessLicense,qq,`time`,lastupdate,`status` FROM t_users WHERE (is_del = ? AND login_name = ?) 
+2021-01-05 09:25:30.750 DEBUG com.longjun.cto.framework.project.pension.userManagement.mapper.UsersMapper.selectList Line:159 -
+				==> Parameters: 0(Integer), admin(String)
+2021-01-05 09:25:30.755 DEBUG com.longjun.cto.framework.project.pension.userManagement.mapper.UsersMapper.selectList Line:159 -
+				<==      Total: 0
+2021-01-05 09:32:30.683 DEBUG com.longjun.cto.framework.project.pension.userManagement.mapper.UsersMapper.selectList Line:159 -
+				==>  Preparing: SELECT id AS id,photo,`name`,real_name AS realName,mobile,admin_id AS adminId,audit_status AS auditStatus,remarks,is_del AS isDel,user_grade_id AS userGradeId,user_type AS userType,user_card_id AS userCardId,user_email AS userEmail,audit_time AS auditTime,audit_remarks AS auditRemarks,login_name AS loginName,`password`,country,province,city,district,address,company_en_name AS companyEnName,company_en_address AS companyEnAddress,legal_representative AS legalRepresentative,enterprise_cn_contact AS enterpriseCnContact,enterprise_en_contact AS enterpriseEnContact,enterprise_fax AS enterpriseFax,contact_line AS contactLine,post_code AS postCode,business_license AS businessLicense,qq,`time`,lastupdate,`status` FROM t_users WHERE (is_del = ? AND login_name = ?) 
+2021-01-05 09:32:30.686 DEBUG com.longjun.cto.framework.project.pension.userManagement.mapper.UsersMapper.selectList Line:159 -
+				==> Parameters: 0(Integer), lm(String)
+2021-01-05 09:32:30.688 DEBUG com.longjun.cto.framework.project.pension.userManagement.mapper.UsersMapper.selectList Line:159 -
+				<==      Total: 1
+2021-01-05 09:38:04.977 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 09:38:04.995 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 09:38:05.016 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 09:51:46.359 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 09:51:46.377 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 09:51:46.398 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:01:34.992 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:01:35.010 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:01:35.033 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:11:37.859 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:11:37.876 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:11:37.898 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:13:38.736 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:13:38.755 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:13:38.777 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:15:16.818 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:15:16.837 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:15:16.859 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:32:58.140 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:32:58.165 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:32:58.190 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:36:02.005 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:36:02.024 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:36:02.048 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:37:12.423 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:37:12.441 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:37:12.464 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:38:31.868 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:38:31.887 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:38:31.910 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:56:46.291 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:56:46.308 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:56:46.330 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 10:59:00.705 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 10:59:00.722 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 10:59:00.744 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 11:00:46.535 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 11:00:46.554 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 11:00:46.578 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 11:04:32.319 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 11:04:32.338 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 11:04:32.363 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 11:08:34.437 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 11:08:34.456 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 11:08:34.479 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 11:36:03.281 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 11:36:03.299 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 11:36:03.322 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 11:39:36.525 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 11:39:36.543 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 11:39:36.564 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 11:46:13.913 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 11:46:13.932 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 11:46:13.955 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 11:58:07.165 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 11:58:07.182 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 11:58:07.204 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 12:02:08.616 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 12:02:08.634 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 12:02:08.656 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 13:15:44.059 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 13:15:44.062 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 13:15:44.068 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 13:40:10.536 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 13:40:10.553 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 13:40:10.574 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 13:43:28.645 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 13:43:28.662 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 13:43:28.684 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:00:57.475 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:00:57.494 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:00:57.519 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:05:34.547 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:05:34.567 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:05:34.590 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:28:53.361 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:28:53.379 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:28:53.401 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:29:36.635 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:29:36.654 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:29:36.676 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:31:22.211 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:31:22.228 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:31:22.250 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:32:39.832 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:32:39.850 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:32:39.871 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:35:28.897 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:35:28.915 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:35:28.937 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:37:16.607 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:37:16.626 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:37:16.650 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:37:16.673 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:37:16.675 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:37:16.683 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 14:41:59.975 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 14:41:59.996 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 14:42:00.020 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 15:14:00.915 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 15:14:00.918 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 15:14:00.925 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 15:31:42.041 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 15:31:42.059 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 15:31:42.081 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 15:50:23.416 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 15:50:23.433 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 15:50:23.455 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101
+2021-01-05 16:37:46.489 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==>  Preparing: SELECT t.`id` as id, t.`time` as time, t.`lastupdate` as lastupdate, t.`use_id` as useId, t.`key` as `key`, t.`value` as value, t.`status` as status, t.`is_not_allowed` as isNotAllowed, t.`mark` as mark, t.`input_type` as inputType FROM t_common_option AS t where 1=1 
+2021-01-05 16:37:46.492 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				==> Parameters: 
+2021-01-05 16:37:46.498 DEBUG com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper.getList Line:159 -
+				<==      Total: 101

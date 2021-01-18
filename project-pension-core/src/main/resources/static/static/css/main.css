@@ -1,0 +1,103 @@
+.admin-main .layui-field-title .layui-field-box{
+	padding: 10px 30px;
+}
+.admin-main .layui-field-title .layui-field-box p{
+	padding: 5px 0;
+}
+
+input:read-only{ 
+    background: #f2f2f2;
+    color: #595963!important;
+    cursor: not-allowed!important;
+}
+textarea:read-only{ 
+    background: #f2f2f2;
+    color: #595963!important;
+    cursor: not-allowed!important;
+}
+input:-moz-read-only{ 
+    background: #f2f2f2;
+    color: #595963!important;
+    cursor: not-allowed!important;
+}
+textarea:-moz-read-only{ 
+    background: #f2f2f2;
+    color: #595963!important;
+    cursor: not-allowed!important;
+}
+.select-icon {
+    position: absolute;
+    top: 10px;
+    right:5px;
+    cursor: pointer;
+    width: 20px;
+    height: 38px;
+}
+.admin_main {
+    padding:0px 10px 10px 12px;
+}
+.admin_header_fixed {
+    width: 100%;
+    z-index: 99;
+    padding: 10px 0 0;
+    background: #fff;
+}
+.admin_header {
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    clear:both;
+}
+.admin_base{
+	padding:0;
+	margin:0;
+}
+.admin_header .action {
+    float: left;
+    line-height: 30px;
+    margin-left: 6px;
+    position: relative;
+    padding-left: 6px;
+}
+.admin_header .action b {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 20px;
+    background: rgba(0,0,0,0.05);
+    margin-top: -10px;
+}
+.admin_header .title {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    position: relative;
+    padding-left: 11px;
+}
+.admin_header .title i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5px;
+    height: 18px;
+    background: #FF5722;
+    margin-top: -8px;
+}
+.quote-padding{
+	padding:5px;
+}
+.erect-slash{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 20px;
+    background: rgba(0,0,0,0.05);
+    margin-top: -10px;
+}
+td {
+    max-width: 100%;
+}

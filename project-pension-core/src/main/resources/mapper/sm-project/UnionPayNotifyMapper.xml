@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.pay.union.mapper.UnionPayNotifyMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.status as status,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.is_del as isDel,  
+		t.header_version as headerVersion,  
+		t.header_transtype as headerTranstype,  
+		t.header_employno as headerEmployno,  
+		t.header_termid as headerTermid,  
+		t.header_request_time as headerRequestTime,  
+		t.header_shopid as headerShopid,  
+		t.header_wlid as headerWlid,  
+		t.body_orderno as bodyOrderno,  
+		t.body_cod as bodyCod,  
+		t.body_payway as bodyPayway,  
+		t.body_banktrace as bodyBanktrace,  
+		t.body_postrace as bodyPostrace,  
+		t.body_tracetime as bodyTracetime,  
+		t.body_cardid as bodyCardid,  
+		t.body_signflag as bodySignflag,  
+		t.body_dssn as bodyDssn,  
+		t.body_dsname as bodyDsname,  
+		t.body_memo as bodyMemo,  
+		t.body_query_id as bodyQueryId 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.pay.union.entity.dto.UnionPayNotifyDto" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionPayNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_pay_notify AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionPayNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_pay_notify AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionPayNotifyView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_pay_notify AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_union_pay_notify AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_union_pay_notify set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

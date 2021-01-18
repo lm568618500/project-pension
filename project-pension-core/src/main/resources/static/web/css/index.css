@@ -1,0 +1,563 @@
+body,html{
+	overflow-y:hidden;
+	overflow-x:hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 修改start */
+.size18{
+    font-size: 18px!important;
+}
+.size14{
+    font-size: 14px!important;
+}
+.size16{
+    font-size: 16px!important;
+}
+/* 修改end */
+.layui-header{
+    height: 58px!important;
+    background: rgba(9,167,236,1)!important;
+    border-bottom: 2px solid rgba(237,157,72,1);
+}
+.layui-logo{
+    width: 27%!important;
+    background: #fff;
+    text-align: left!important;
+    padding-left: 1%;
+}
+.layui-logo .angle{
+    width: 0;
+    height: 0;
+    border-color: rgba(9,167,236,1) transparent;
+    border-width: 0 0 58px 58px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.myheader .layui-nav-bar{
+    background: rgba(237,157,72,1);
+}
+.myheader .layui-nav-item a{
+    padding:0 10px;
+}
+.mynavbar .layui-nav-bar{
+    width: 0;
+}
+.mynavbar .yiji:hover,.mynavbar .yiji>a:hover{
+    background: rgba(9,167,236,1);
+    color: #fff!important;
+}
+.layui-logo img{
+    width: 75%;
+}
+/* 修改start */
+ul li a{
+    font-size:14px!important;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(255,255,255,1)!important;
+}
+.layui-layout-left {
+    left: 26%!important;
+}
+/* 修改end */
+.layui-nav {
+    background-color: #fff;
+}
+.yiji{
+    background:#eee;
+    border-bottom:1px solid #fff;
+}
+.erji{
+    background:#fff;
+    border-bottom:1px solid #eee;
+}
+.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this>a, .layui-nav-tree .layui-this>a:hover {
+    /* background-color: #09a7ec!important; */
+    color: #09a7ec!important;
+}
+.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this>a, .layui-nav-tree .layui-this>a:hover {
+    background-color: #fff!important;
+    color: #09a7ec;
+}
+.layui-nav .layui-nav-child dd.layui-this a, .layui-nav-child dd.layui-this {
+    background-color: #fff;
+    color: #666;
+}
+.layui-nav-tree li a{
+    font-size:7px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(23,26,30,1)!important;
+}
+.layui-nav-tree li a img{
+    width: 15px;
+    height: 15px;
+    margin: 0 10px 5px 0;
+}
+.layui-body{
+    padding:0 15px 15px;
+}
+/* 修改start */
+.content_header{
+    padding:15px 0;
+    font-size:12px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    border-bottom: 1px solid rgba(238,238,238,1);
+}
+/* 修改end */
+.system{
+    width: 100%;
+    /* height: 100%; */
+    padding: 15px 0; 
+}
+.system h3{
+    font-size:20px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+    color:rgba(23,26,30,1);
+    margin-bottom: 15px;
+}
+.system p{
+    font-size:16px;
+    line-height: 25px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(23,26,30,1);
+}
+.left_div{
+    width: calc(100% - 240px);
+    float: left;
+}
+.right_div{
+    width: 240px;
+    float: right;
+}
+.right_div img{
+    width: 100px;
+    height: auto;
+    vertical-align:top;
+    margin:0 5px;
+}
+.right_div div{
+    display: inline-block;
+    width: 100px;
+    font-size: 13px;
+}
+.third_p{
+    margin-bottom: 15px;
+}
+.part{
+    width: 49%;
+    height: 190px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(185,215,234,1);
+}
+.part1{
+    margin-right: 17px;
+}
+.marginbottom15{
+    margin-bottom: 15px;
+}
+.part_header{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    background: url(../images/bg1.png) no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+.part_header>div{
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+}
+.part_header a{
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.part_header img{
+    width: 20px;
+    height: 20px;
+}
+.part ul{
+    width: 100%;
+}
+.part ul li{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid rgba(221,240,251,1);
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.part ul li:hover{
+    color:rgba(9,167,236,1);
+}
+.dotted{
+    width:4px;
+    height:4px;
+    display: inline-block;
+    background:rgba(0,159,229,1);
+    border-radius:2px;
+    margin: 0 8px 2px 9px;
+}
+.list_row{
+    padding: 10px 0;
+}
+.list_row2{
+    padding: 10px 0 0;
+    height: 25px;
+}
+.list_div{
+    height:30px;
+    margin-bottom: 15px;
+}
+.list_div_div{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    background:linear-gradient(0deg,rgba(255,255,255,1),rgba(234,243,255,1),rgba(254,254,254,1));
+    border:1px solid rgba(185, 215, 234, 1);
+    border-radius:2px;
+    line-height: 30px;
+    font-size: 16px;
+}
+.list_div_div1{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    background:linear-gradient(0deg,rgba(255,255,255,1),rgba(234,243,255,1),rgba(254,254,254,1));
+    border:1px solid rgba(185, 215, 234, 1);
+    border-radius:2px;
+    line-height: 25px;
+    font-size: 12px;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    font-size:16px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(23,26,30,1);
+    margin-top: 10px;
+}
+.page{
+    display: none;
+}
+#index{
+    display: block;
+}
+#apply{
+    /* display: block; */
+}
+/* apply */
+.stepInfo{
+    padding: 10px 0;
+}
+.stepInfo div{
+    width: 200px;
+    height: 38px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 38px;
+    background: url('../images/progress.png') no-repeat;
+    background-size: 100% 100%;
+}
+.stepInfo div.first{
+    background: url('../images/progress_active.png') no-repeat;
+    background-size: 100% 100%;
+    color: white;
+}
+.stepInfo div.active{
+    background: url('../images/progress_active1.png') no-repeat;
+    background-size: 100% 100%;
+    color: white;
+}
+.layui-form .input{
+    /* height: 40px; */
+    line-height: 40px;
+}
+.stepInfo{
+    display: flex;
+}
+.stepInfo div{
+
+}
+.step{
+    display: none;
+}
+.step1 {
+    display: block;
+    padding-right: 40px;
+}
+.step .title{
+    line-height: 50px;
+    color: #171A1E;
+    font-size: 16px;
+    background: #f7f7f7;
+    padding-left: 15px;
+    font-weight: bold;
+    border-top: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+.title40{
+    line-height: 40px;
+    color: #171A1E;
+    font-size: 14px;
+    background: #f7f7f7;
+    padding-left: 15px;
+    font-weight: bold;
+}
+.mods{
+    margin: 15px 0;
+}
+.br{
+    border-right: 1px solid #eeeeee;
+}
+.step1 .layui-col-md6,.step1 .layui-col-md12{
+    padding-left: 15px;
+    border-left: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+.step1 .layui-form-radio{
+    line-height: 40px;
+    margin: 6px 0;
+    padding-right: 0;
+}
+.layui-form-radio>i:hover, .layui-form-radioed>i {
+    color: #09a7ec;
+}
+.step1 .mods .fw{
+    border: none;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+.bb{
+    border-bottom: 1px solid #eeeeee!important;
+}
+.bl{
+    border-left: 1px solid #eeeeee!important;
+}
+.bn{
+    border-right: none;
+    border-top:none ;
+}
+.red{
+    color: red;
+    margin: 0 5px;
+}
+.fw .layui-form-radio div{
+    font-weight: bold;
+    color: #171A1E;
+}
+.fw .infos{
+    display: inline-block;
+    font-size: 14px;
+    margin: 6px 0;
+    vertical-align: top;
+}
+.fw .infos p{
+    line-height: 30px;
+    font-size: 12px;
+    color: #666;
+}
+.fw .infos p span{
+    font-weight: bold;
+}
+.step2 .form{
+    border: 1px solid #eee;
+}
+.form1{
+    margin-bottom: 15px;
+}
+.tips{
+    color: #999;
+    font-size: 14px;
+    padding-left:30px;
+}
+.tips1{
+    margin-top: 15px;
+}
+/* audit */
+#audit{
+    margin-top: 15px;
+    border: 1px solid #eee;
+}
+.layui-table {
+    width: 100%!important;
+}
+.layui-table td{
+    font-size: 14px;
+}
+.layui-table th {
+    font-size: 16px;
+}
+.layui-table a{
+    color: #009fe5;
+}
+.layui-table a.first_a{
+    margin-right: 10px;
+}
+.layui-table-page{
+    text-align: right;
+}
+.layui-laypage-limits{
+    display: none!important;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #009ee2;
+}
+#audit .layui-form{
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+.form_table{
+    margin: 1.5%;
+}
+.form_table .layui-input {
+    width: 13%;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.form_table .layui-btn{
+    font-size: 14px;
+}
+.btn1{
+    background: #009fe5;
+    color: #fff;
+    border: none;
+}
+.btn1:hover{
+    color: #fff;
+}
+.paddingleft{
+    padding-left: 65px;
+}
+.choose{
+    display: inline-block;
+    font-size: 13px;
+    margin: 6px 0 0 100px;
+    vertical-align: middle;
+}
+.useInfo .fw .layui-form-radio div{
+    font-weight: normal;
+}
+.useInfo .fw{
+    padding: 20px 15px;
+}
+.useInfo .fw .layui-input{
+    width: 180px;
+    display: inline-block;
+    margin: 0 10px;
+}
+.useInfo .fw .layui-btn-primary,.useInfo .fw .layui-btn-primary:hover{
+    color: #009FE5;
+    border-color: #009FE5;
+}
+.btns{
+    padding: 20px 0 5px 10px;
+}
+.ac{
+    text-align: center;
+}
+.al{
+    text-align: left;
+}
+.step2{
+    color: #171A1E;
+}
+.step2 .layui-form-label{
+    width: 90px;
+}
+.step2 .layui-input-block{
+    margin-left: 120px;
+}
+.step2 .layui-form-item{
+    margin: 10px 0;
+}
+.step2 .layui-input,.step2 .layui-textarea{
+    width: 80%;
+}
+.step2 .product{
+    padding: 9px 0;
+    line-height: 20px;
+    font-weight: bold;
+}
+.step2 .form .layui-form-item .width160{
+    width: 200px!important;
+    font-weight: bold;
+}
+.step2 .form .layui-form-item .width160 + .layui-input-block{
+    margin-left: 200px!important;
+}
+.step2 .form .layui-form-item .layui-input-block .words{
+    line-height: 28px;
+    margin: 6px 10px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.step2 .form .layui-form-item .layui-form-label{
+    width: 180px;
+}
+.step2 .form .layui-form-item .layui-form-label + .layui-input-block{
+    margin-left: 180px;
+}
+.step2 .productInfo .layui-form-item .layui-form-label{
+    width: 260px;
+}
+.step2 .productInfo .layui-form-item .layui-form-label + .layui-input-block{
+    margin-left: 260px;
+}
+.step2 .productInfo .ls .layui-input{
+    width: 50%;
+}
+.step2 .layui-form-item .layui-inline{
+    width: 42%;
+}
+.step2 .layui-form-item .layui-inline .layui-input-inline{
+    width: calc(100% - 220px);
+}
+.step2 .layui-form-item .layui-inline .layui-input-inline .layui-input{
+    width: 100%;
+}
+.step2 .smbtn{
+    height: 26px;
+    line-height: 26px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.step2 .btns .layui-btn{
+    width: 130px;
+}
+.step2 .btns .layui-btn:hover{
+    border-color: #09a7ec;
+} 
+.layui-form-checked[lay-skin=primary] i{
+    border-color: #09a7ec!important;
+    background: #09a7ec;
+}
+.content_header .icon{
+    margin: 0 10px;
+}
+.mynavbar .yiji>a.active{
+    background: #09a7ec;
+    color: #fff!important;
+}
+/* .firstMenu{
+    cursor: pointer;
+} */

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonDictMapper">
+
+	<!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.longjun.cto.framework.sm.sys.entity.view.CommonDictView">
+		<id column="id" property="id" />
+		<result column="type_id" property="typeId" />
+		<result column="use_id" property="useId" />
+		<result column="show_name" property="showName" />
+		<result column="use_sort" property="useSort" />
+		<result column="is_use" property="isUse" />
+		<result column="description" property="description" />
+		<result column="time" property="time" />
+		<result column="lastupdate" property="lastupdate" />
+		<result column="status" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		id,  
+		type_id,  
+		use_id,  
+		show_name,  
+		use_sort,  
+		is_use,  
+		description,  
+		time,  
+		lastupdate,  
+		status 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonDictDto" 
+		resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_common_dict AS t
+		WHERE 1 = 1 and t.is_del=0
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_type_id != null and c_type_id !=''">
+		 	and t.type_id =#{c_type_id}
+		</if>
+		<if test="c_show_name != null and c_show_name !=''">
+		 	and t.show_name like concat('%',#{c_show_name},'%')
+		</if>
+		 
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+		order by t.time desc
+		
+	</select>
+	 
+</mapper>

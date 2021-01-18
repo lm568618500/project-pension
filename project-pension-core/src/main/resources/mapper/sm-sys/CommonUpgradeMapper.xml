@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonUpgradeMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.is_del as isDel,  
+		t.admin_id as adminId,  
+		t.version as version,  
+		t.tips as tips,  
+		t.pub_time as pubTime,  
+		t.plat_form as platForm,  
+		t.down_type as downType,  
+		t.file_name as fileName,  
+		t.down_url as downUrl,  
+		t.qr_code as qrCode,  
+		t.is_need as isNeed,  
+		t.is_default as isDefault,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.version_number as versionNumber ,
+		t.app_id as appId
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonUpgradeDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonUpgradeView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.is_del AS isDel,
+		  t.admin_id AS adminId,
+		  t.version AS `version`,
+		  t.tips AS tips,
+		  t.pub_time AS pubTime,
+		  t.plat_form AS platForm,
+		  t.down_type AS downType,
+		  t.file_name AS fileName,
+		  t.down_url AS downUrl,
+		  t.qr_code AS qrCode,
+		  t.is_need AS isNeed,
+		  t.is_default AS isDefault,
+		  t.lastupdate AS lastupdate,
+		  t.status AS STATUS,
+		  t.version_number AS versionNumber,
+		  t.app_id AS appId,
+		  a.`app_name` AS appName 
+		FROM
+		  t_common_upgrade AS t 
+		  LEFT JOIN t_common_upgrade_app AS a 
+		    ON t.`app_id` = a.`app_id` 
+		WHERE 1 = 1 
+		  AND is_del = 0 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_version != null and c_version != ''">
+		 	and t.version = #{c_version}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+		order by time desc
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonUpgradeView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.is_del AS isDel,
+		  t.admin_id AS adminId,
+		  t.version AS `version`,
+		  t.tips AS tips,
+		  t.pub_time AS pubTime,
+		  t.plat_form AS platForm,
+		  t.down_type AS downType,
+		  t.file_name AS fileName,
+		  t.down_url AS downUrl,
+		  t.qr_code AS qrCode,
+		  t.is_need AS isNeed,
+		  t.is_default AS isDefault,
+		  t.lastupdate AS lastupdate,
+		  t.status AS STATUS,
+		  t.version_number AS versionNumber,
+		  t.app_id AS appId,
+		  a.`app_name` AS appName 
+		FROM
+		  t_common_upgrade AS t 
+		  LEFT JOIN t_common_upgrade_app AS a 
+		    ON t.`app_id` = a.`app_id` 
+		WHERE 1 = 1 
+		  AND is_del = 0  and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonUpgradeView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.is_del AS isDel,
+		  t.admin_id AS adminId,
+		  t.version AS `version`,
+		  t.tips AS tips,
+		  t.pub_time AS pubTime,
+		  t.plat_form AS platForm,
+		  t.down_type AS downType,
+		  t.file_name AS fileName,
+		  t.down_url AS downUrl,
+		  t.qr_code AS qrCode,
+		  t.is_need AS isNeed,
+		  t.is_default AS isDefault,
+		  t.lastupdate AS lastupdate,
+		  t.status AS STATUS,
+		  t.version_number AS versionNumber,
+		  t.app_id AS appId,
+		  a.`app_name` AS appName 
+		FROM
+		  t_common_upgrade AS t 
+		  LEFT JOIN t_common_upgrade_app AS a 
+		    ON t.`app_id` = a.`app_id` 
+		WHERE 1 = 1 
+		  AND is_del = 0 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		limit 0,#{c_limit}
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonUpgradeView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_common_upgrade AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_common_upgrade set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

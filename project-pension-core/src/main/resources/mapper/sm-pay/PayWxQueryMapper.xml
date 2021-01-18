@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.pay.mapper.PayWxQueryMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.out_trade_no as outTradeNo,  
+		t.transaction_id as transactionId,  
+		t.return_code as returnCode,  
+		t.result_code as resultCode,  
+		t.return_msg as returnMsg,  
+		t.err_code as errCode,  
+		t.err_code_des as errCodeDes,  
+		t.appid as appid,  
+		t.mch_id as mchId,  
+		t.sub_app_id as subAppId,  
+		t.sub_mch_id as subMchId,  
+		t.nonce_str as nonceStr,  
+		t.sign as sign,  
+		t.xml_string as xmlString,  
+		t.promotion_detail as promotionDetail,  
+		t.device_info as deviceInfo,  
+		t.openid as openid,  
+		t.is_subscribe as isSubscribe,  
+		t.trade_type as tradeType,  
+		t.trade_state as tradeState,  
+		t.bank_type as bankType,  
+		t.total_fee as totalFee,  
+		t.settlement_total_fee as settlementTotalFee,  
+		t.fee_type as feeType,  
+		t.cash_fee as cashFee,  
+		t.cash_fee_type as cashFeeType,  
+		t.coupon_fee as couponFee,  
+		t.coupon_count as couponCount,  
+		t.coupons as coupons,  
+		t.attach as attach,  
+		t.time_end as timeEnd,  
+		t.trade_state_desc as tradeStateDesc 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.pay.entity.dto.PayWxQueryDto" 
+		resultType="com.longjun.cto.framework.sm.pay.entity.view.PayWxQueryView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_wx_query AS t
+		WHERE t.status = 1 
+		<if test="c_status != -10001">
+		 	and t.use_status =#{c_status}
+		</if>
+		 
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+		
+	</select>
+	 
+</mapper>

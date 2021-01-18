@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.project.pension.userManagement.mapper.UsersMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,
+		t.photo as photo,
+		t.name as name,
+		t.real_name as realName,
+		t.mobile as mobile,
+		t.admin_id as adminId,
+		t.time as time,
+		t.lastupdate as lastupdate,
+		t.status as status,
+		t.audit_status as auditStatus,
+		t.remarks as remarks,
+		t.is_del as isDel,
+		t.user_grade_id as userGradeId,
+		t.user_type as userType,
+		t.user_card_id as userCardId,
+		t.user_email as userEmail,
+		t.audit_time as auditTime,
+		t.audit_remarks as auditRemarks,
+		t.login_name as loginName,
+		t.password as password,
+		t.country as country,
+		t.province as province,
+		t.city as city,
+		t.district as district,
+		t.address as address,
+		t.company_en_name as companyEnName,
+		t.company_en_address as companyEnAddress,
+		t.legal_representative as legalRepresentative,
+		t.enterprise_cn_contact as enterpriseCnContact,
+		t.enterprise_en_contact as enterpriseEnContact,
+		t.enterprise_fax as enterpriseFax,
+		t.contact_line as contactLine,
+		t.post_code as postCode,
+		t.business_license as businessLicense,
+		t.qq as qq
+    </sql>
+
+    <select id="getByPage" parameterType="com.longjun.cto.framework.project.pension.userManagement.entity.dto.UsersDto"
+            resultType="com.longjun.cto.framework.project.pension.userManagement.entity.view.UsersView">
+        SELECT
+        t.id as id,
+        t.photo as photo,
+        t.name as name,
+        t.real_name as realName,
+        t.mobile as mobile,
+        t.admin_id as adminId,
+        ta.real_name as adminName,
+        t.time as time,
+        t.lastupdate as lastupdate,
+        t.status as status,
+        t.audit_status as auditStatus,
+        t.remarks as remarks,
+        t.is_del as isDel,
+        t.user_grade_id as userGradeId,
+        tug.grade_level as gradeLevel,
+        t.user_type as userType,
+        t.user_card_id as userCardId,
+        t.user_email as userEmail,
+        t.audit_time as auditTime,
+        t.audit_remarks as auditRemarks,
+        t.login_name as loginName,
+        t.password as password,
+        t.country as country,
+        t.province as province,
+        t.city as city,
+        t.district as district,
+        t.address as address,
+        t.company_en_name as companyEnName,
+        t.company_en_address as companyEnAddress,
+        t.legal_representative as legalRepresentative,
+        t.enterprise_cn_contact as enterpriseCnContact,
+        t.enterprise_en_contact as enterpriseEnContact,
+        t.enterprise_fax as enterpriseFax,
+        t.contact_line as contactLine,
+        t.post_code as postCode,
+        t.business_license as businessLicense,
+        t.qq as qq,
+        (select count(1) from t_authentication_application as taa INNER JOIN t_certificate_issue as  tci on taa.id=tci.authentication_application_id
+        WHERE taa.user_id=t.id) as certificatesNumber
+        FROM t_users AS t
+        LEFT JOIN t_admin as ta on t.admin_id=ta.id and ta.`status`=1 and ta.is_del=0
+        LEFT JOIN t_users_grade as tug on t.user_grade_id=tug.id and tug.`status`=0 and tug.is_del=0
+        WHERE 1 = 1
+        <if test="c_audit_status != null and  c_audit_status != ''">
+            and t.audit_status=#{c_audit_status}
+        </if>
+        <if test="c_user_type != null and  c_user_type != '' and c_user_type!=-10001">
+            and t.user_type=#{c_user_type}
+        </if>
+        <if test="c_user_card_id != null and  c_user_card_id != ''">
+            and t.user_card_id like concat('%', #{c_user_card_id} , '%')
+        </if>
+        <if test="c_name != null and  c_name != ''">
+            and t.name like concat('%', #{c_name} , '%')
+        </if>
+        <if test="c_startTime != null and  c_startTime != ''">
+            and t.lastupdate <![CDATA[>=]]> #{c_startTime}
+        </if>
+        <if test="c_endTime != null and  c_endTime != ''">
+            and t.lastupdate <![CDATA[<=]]> #{c_endTime}
+        </if>
+    </select>
+
+    <select id="findViewById" parameterType="java.lang.Object"
+            resultType="com.longjun.cto.framework.project.pension.userManagement.entity.view.UsersView">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_users AS t
+        WHERE 1=1 and t.id = #{id}
+    </select>
+
+    <select id="listModelMap" parameterType="java.lang.Object"
+            resultType="com.longjun.cto.framework.project.pension.userManagement.entity.view.UsersView">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_users AS t
+        WHERE 1=1
+        <if test="c_status != null">
+            and t.status =#{c_status}
+        </if>
+        <if test="c_limit != null">
+            limit 0,#{c_limit}
+        </if>
+    </select>
+
+    <select id="countMap" parameterType="java.lang.Object"
+            resultType="java.lang.Integer">
+        SELECT
+        count(1)
+        FROM t_users AS t
+        WHERE 1=1
+        <if test="c_status != -10001">
+            and t.status =#{c_status}
+        </if>
+    </select>
+
+    <update id="del" parameterType="java.lang.Long">
+		 update t_users set is_del = 1
+		 where id = #{id}
+	</update>
+
+</mapper>

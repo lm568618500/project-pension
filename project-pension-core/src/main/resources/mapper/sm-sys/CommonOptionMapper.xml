@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonOptionMapper">
+ 
+	<select id="getById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonOptionView">
+		SELECT
+			t.`id` as id, 
+			t.`time` as time,
+			t.`lastupdate` as lastupdate,
+			t.`use_id` as useId,
+			t.`key` as `key`,
+			t.`value` as value,
+			t.`status` as status,
+			t.`is_not_allowed` as isNotAllowed,
+			t.`mark` as mark,
+			t.`input_type` as inputType
+		FROM
+			t_common_option AS t
+			where 1=1
+			and id = #{id}
+	</select>
+	
+	<select id="getByUseId" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonOptionView">
+		SELECT
+			t.`id` as id, 
+			t.`time` as time,
+			t.`lastupdate` as lastupdate,
+			t.`use_id` as useId,
+			t.`key` as `key`,
+			t.`value` as value,
+			t.`status` as status,
+			t.`is_not_allowed` as isNotAllowed,
+			t.`mark` as mark,
+			t.`input_type` as inputType
+		FROM
+			t_common_option AS t
+			where 1=1
+			and use_id = #{useId}
+	</select>
+	
+	<update id="setInfo" parameterType="com.longjun.cto.framework.sm.sys.entity.model.CommonOptionModel">
+		update t_common_option set 
+			`value` = #{value},
+			`status` = #{status}
+		where id = #{id}
+	</update>
+	<update id="updateModelByKeyVal" parameterType="java.lang.Object">
+		update t_common_option set 
+			`value` = #{value}
+		where `key` = #{key}
+	</update>
+	 
+	<select id="getList" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonOptionView">
+		SELECT
+			t.`id` as id, 
+			t.`time` as time,
+			t.`lastupdate` as lastupdate,
+			t.`use_id` as useId,
+			t.`key` as `key`,
+			t.`value` as value,
+			t.`status` as status,
+			t.`is_not_allowed` as isNotAllowed,
+			t.`mark` as mark,
+			t.`input_type` as inputType
+		FROM
+			t_common_option AS t
+			where 1=1
+	</select>
+	 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonOptionDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonOptionView">
+		SELECT
+			t.`id` as id, 
+			t.`time` as time,
+			t.`lastupdate` as lastupdate,
+			t.`use_id` as useId,
+			t.`key` as `key`,
+			t.`value` as value,
+			t.`status` as status,
+			t.`is_not_allowed` as isNotAllowed,
+			t.`mark` as mark,
+			t.`input_type` as inputType
+		FROM
+			t_common_option AS t
+			where 1=1 and is_not_allowed=0
+			<if test="c_key != null and c_key != ''">
+				and t.`key` like concat('%',#{c_key},'%')			
+			</if>
+	</select>
+	
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonOptionView">
+		SELECT
+			t.`id` as id, 
+			t.`time` as time,
+			t.`lastupdate` as lastupdate,
+			t.`use_id` as useId,
+			t.`key` as `key`,
+			t.`value` as value,
+			t.`status` as status,
+			t.`is_not_allowed` as isNotAllowed,
+			t.`mark` as mark,
+			t.`input_type` as inputType
+		FROM
+			t_common_option AS t
+			where 1=1 
+		<if test="c_status != null and c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_key != null and c_key != ''">
+		 	and t.key =#{c_key}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	 
+	 
+</mapper>

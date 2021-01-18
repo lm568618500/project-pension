@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.AuthRoleResourcesMapper">
+
+	<select id="getListByAdminId" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.AuthRoleResourcesView">
+		SELECT 
+			rr.id AS id , 
+			rr.time AS TIME,
+			rr.`roleId` AS roleId,
+			arl.`rolename` AS roleName,
+			rr.`resourcesId` AS resourcesId,
+			ar.name AS resourcesName,
+			ar.target AS resourcesTarget,
+			ar.cls AS resourcesCls,
+			ar.dom_id AS resourcesDomId,
+			ar.dom_name AS resourcesDomName,
+			ar.`url` AS resUrl,
+			ar.`parent_id` as parentId,
+			ar.`type` as type,
+			rr.status AS STATUS
+			 FROM `t_auth_role_resource` AS rr
+			LEFT JOIN `t_auth_resource` AS ar
+			ON rr.`resources_id` = ar.`id`
+			LEFT JOIN t_auth_role AS arl
+			ON rr.`role_id` = arl.`id`
+			WHERE rr.`roleId` = (
+				SELECT role_id FROM t_admin AS a 
+				WHERE a.id  = #{adminId}
+			)
+			and rr.status = 1
+			and ar.status = 1
+			ORDER BY ar.`sort` ASC
+	</select>
+	
+	<select id="getByAdminIdAndUrl" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.AuthRoleResourcesView">
+		SELECT 
+			rr.id AS id , 
+			rr.time AS TIME,
+			rr.`role_id` AS roleId,
+			arl.`rolename` AS roleName,
+			rr.`resources_id` AS resourcesId,
+			ar.name AS resourcesName,
+			ar.target AS resourcesTarget,
+			ar.dom_id AS resourcesDomId,
+			ar.dom_name AS resourcesDomName,
+			ar.cls AS resourcesCls,
+			ar.`url` AS resUrl,
+			rr.status AS STATUS
+			 FROM `t_auth_role_resource` AS rr
+			LEFT JOIN `t_auth_resource` AS ar
+			ON rr.`resources_id` = ar.`id`
+			LEFT JOIN t_auth_roles AS arl
+			ON rr.`role_id` = arl.`id`
+			WHERE rr.`role_id` = (
+				SELECT role_id FROM t_admin AS a 
+				WHERE a.id  = #{adminId}
+			)
+			and rr.status = 1
+			and ar.status = 1
+			AND ar.`url` = #{resUrl} limit 0,1
+	</select>
+	
+	<update id="setStatusByRoleId" parameterType="java.lang.Object">
+		update t_auth_role_resource set status = #{status}
+		where role_id = #{roleId}
+	</update>
+	
+	<update id="setStatusByResourcesId" parameterType="java.lang.Object">
+		update t_auth_role_resource set status = #{status}
+		where resources_id = #{resourcesId}
+	</update>
+	
+	<update id="updateInitAuthRolesByRoleId" parameterType="java.lang.Object">
+		update t_auth_role_resource set status = 0
+		where role_id = #{roleId}
+	</update>
+	
+	
+	<insert id="saveModel" parameterType="com.longjun.cto.framework.sm.sys.entity.model.AuthRoleResourcesModel"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO `t_auth_role_resource` (`role_id`, `resources_id`, `status`) VALUES 
+		( #{roleId}, #{resourcesId}, #{status});
+
+	</insert>
+	
+	 
+</mapper>

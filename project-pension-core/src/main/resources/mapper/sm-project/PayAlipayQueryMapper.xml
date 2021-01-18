@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.pay.alipay.mapper.PayAlipayQueryMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel,  
+		t.msg as msg,  
+		t.code as code,  
+		t.buyer_user_id as buyerUserId,  
+		t.send_pay_date as sendPayDate,  
+		t.invoice_amount as invoiceAmount,  
+		t.out_trade_no as outTradeNo,  
+		t.total_amount as totalAmount,  
+		t.trade_status as tradeStatus,  
+		t.trade_no as tradeNo,  
+		t.buyer_logon_id as buyerLogonId,  
+		t.receipt_amount as receiptAmount,  
+		t.point_amount as pointAmount,  
+		t.buyer_pay_amount as buyerPayAmount 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.pay.alipay.entity.dto.PayAlipayQueryDto" 
+		resultType="com.longjun.cto.framework.sm.pay.alipay.entity.view.PayAlipayQueryView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_alipay_query AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.alipay.entity.view.PayAlipayQueryView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_alipay_query AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.alipay.entity.view.PayAlipayQueryView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_alipay_query AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_pay_alipay_query AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_pay_alipay_query set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

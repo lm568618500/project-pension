@@ -1,0 +1,14 @@
+[init]
+version=1.0
+#数据库连接
+db_url=jdbc:mysql://127.0.0.1:3306/jw?useUnicode=true&characterEncoding=UTF-8
+#数据库账号
+db_user=root
+#数据库密码
+db_pwd=123456
+tables=t_new_type_four,t_new_type_one,t_new_type_three,t_new_type_two,t_news
+codeParentPakage=com.longjun.cto.framework
+codePakage=project.pension.finance
+author=liuming
+ftlPath=/mgn/finance
+codeRootPath=d:/back

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.longjun.cto.framework.sm.users.mapper.UserMapper">
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		t.id as id,
+		t.time as time,
+		t.photo as photo,
+		t.user_name as
+		userName,
+		t.real_name as realName,
+		t.mobile as mobile,
+		t.password as
+		password,
+		t.user_type as userType,
+		t.status as status,
+		t.online as
+		online,
+		t.remark as remark,
+		t.is_del as isDel,
+		t.lastupdate as
+		lastupdate,
+		t.is_black as isBlack,
+		t.is_lock as isLock,
+		t.login_error_count as loginErrorCount,
+		t.lock_time as lockTime ,
+		t.user_no as userNo ,
+		t.sex as sex ,
+		t.job as job,
+		t.p_id
+		as pId,
+		t.c_id as
+		cId,
+		t.a_id as aId,
+		t.signature as signature
+	</sql>
+
+	<select id="getByPage"
+		parameterType="com.longjun.cto.framework.sm.users.entity.dto.UserDto"
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserView">
+		SELECT
+		t.id AS id,
+		t.time AS time,
+		t.photo AS photo,
+		t.user_name AS
+		userName,
+		t.real_name AS realName,
+		t.mobile AS mobile,
+		t.PASSWORD AS
+		PASSWORD,
+		t.user_type AS userType,
+		t.STATUS AS STATUS,
+		t.ONLINE AS
+		ONLINE,
+		t.remark AS remark,
+		t.is_del AS isDel,
+		t.lastupdate AS
+		lastupdate,
+		t.is_black AS isBlack,
+		t.is_lock AS isLock,
+		t.login_error_count AS loginErrorCount,
+		t.lock_time AS lockTime,
+		t.user_no AS userNo,
+		t.sex AS sex,
+		t.job AS job,
+		t.p_id AS pId,
+		t.c_id AS
+		cId,
+		t.a_id AS aId,
+		t.signature AS signature,
+		t.score AS score,
+		t.level_id AS levelId,
+		t.email AS email,
+		t.YEAR AS YEAR,
+		t.MONTH AS
+		MONTH,
+		t.DAY AS DAY,
+		t.birthday AS birthday,
+		uld.level_name AS levelName,
+		uld.img AS levelImg,
+		cp.`name` AS pName,
+		cc.`name` AS cName,
+		ca.`name` AS aName,
+		cd.show_name
+		AS jobName
+		FROM
+		t_user AS t
+		LEFT JOIN t_user_level_dict AS uld ON
+		t.level_id = uld.id
+		LEFT JOIN t_common_province AS cp ON t.p_id =
+		cp.use_id
+		LEFT JOIN t_common_city AS cc ON t.c_id = cc.use_id
+		LEFT JOIN
+		t_common_area AS ca ON t.a_id = ca.use_id
+		LEFT JOIN t_common_dict AS cd
+		ON t.job = cd.use_id
+		WHERE
+		1 = 1
+		AND t.is_del = 0
+		<if test="c_status != -10001">
+			and t.status = #{c_status}
+		</if>
+		<if test="c_realName != null and c_realName != ''">
+			and t.real_name like concat('%', #{c_realName} , '%')
+		</if>
+		<if test="c_userName != null and c_userName != ''">
+			and t.user_name like concat('%', #{c_userName} , '%')
+		</if>
+		<if test="c_mobile != null and c_mobile != ''">
+			and t.mobile like concat('%', #{c_mobile} , '%')
+		</if>
+		<if
+			test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+			and t.time <![CDATA[>=]]>
+			#{c_startTime} and t.time <![CDATA[<=]]>
+			#{c_endTime}
+		</if>
+	</select>
+
+	<select id="findViewById" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserView">
+		SELECT
+		t.id AS id,
+		t.time AS time,
+		t.photo AS photo,
+		t.user_name AS userName,
+		t.real_name AS realName,
+		t.mobile AS mobile,
+		t.PASSWORD AS PASSWORD,
+		t.user_type AS userType,
+		t.STATUS AS STATUS,
+		t.ONLINE AS ONLINE,
+		t.remark AS remark,
+		t.is_del AS isDel,
+		t.lastupdate
+		AS lastupdate,
+		t.is_black AS isBlack,
+		t.is_lock AS isLock,
+		t.login_error_count AS loginErrorCount,
+		t.lock_time AS lockTime,
+		t.user_no AS userNo,
+		t.sex AS sex,
+		t.job AS job,
+		t.p_id AS pId,
+		t.c_id AS
+		cId,
+		t.a_id AS aId,
+		t.signature AS signature,
+		t.score AS score,
+		t.level_id AS levelId,
+		t.email AS email,
+		t.YEAR AS YEAR,
+		t.MONTH AS
+		MONTH,
+		t.DAY AS DAY,
+		t.birthday AS birthday,
+		uld.level_name AS levelName,
+		uld.img AS levelImg,
+		cp.`name` AS pName,
+		cc.`name` AS cName,
+		ca.`name` AS aName,
+		cd.show_name
+		AS jobName
+		FROM
+		t_user AS t
+		LEFT JOIN t_user_level_dict AS uld ON
+		t.level_id = uld.id
+		LEFT JOIN t_common_province AS cp ON t.p_id =
+		cp.use_id
+		LEFT JOIN t_common_city AS cc ON t.c_id = cc.use_id
+		LEFT JOIN
+		t_common_area AS ca ON t.a_id = ca.use_id
+		LEFT JOIN t_common_dict AS cd
+		ON t.job = cd.use_id
+		WHERE
+		1 = 1
+		AND t.is_del = 0
+		and t.id = #{id}
+	</select>
+
+	<select id="listModelMap" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserView">
+		SELECT
+		t.id AS id,
+		t.time AS time,
+		t.photo AS photo,
+		t.user_name AS
+		userName,
+		t.real_name AS realName,
+		t.mobile AS mobile,
+		t.PASSWORD AS
+		PASSWORD,
+		t.user_type AS userType,
+		t.STATUS AS STATUS,
+		t.ONLINE AS
+		ONLINE,
+		t.remark AS remark,
+		t.is_del AS isDel,
+		t.lastupdate AS
+		lastupdate,
+		t.is_black AS isBlack,
+		t.is_lock AS isLock,
+		t.login_error_count AS loginErrorCount,
+		t.lock_time AS lockTime,
+		t.user_no AS userNo,
+		t.sex AS sex,
+		t.job AS job,
+		t.p_id AS pId,
+		t.c_id AS
+		cId,
+		t.a_id AS aId,
+		t.signature AS signature,
+		t.score AS score,
+		t.level_id AS levelId,
+		t.email AS email,
+		t.YEAR AS YEAR,
+		t.MONTH AS
+		MONTH,
+		t.DAY AS DAY,
+		t.birthday AS birthday,
+		uld.level_name AS levelName,
+		uld.img AS levelImg,
+		cp.`name` AS pName,
+		cc.`name` AS cName,
+		ca.`name` AS aName,
+		cd.show_name
+		AS jobName
+		FROM
+		t_user AS t
+		LEFT JOIN t_user_level_dict AS uld ON
+		t.level_id = uld.id
+		LEFT JOIN t_common_province AS cp ON t.p_id =
+		cp.use_id
+		LEFT JOIN t_common_city AS cc ON t.c_id = cc.use_id
+		LEFT JOIN
+		t_common_area AS ca ON t.a_id = ca.use_id
+		LEFT JOIN t_common_dict AS cd
+		ON t.job = cd.use_id
+		WHERE
+		1 = 1
+		AND t.is_del = 0
+		<if test="c_status != null">
+			and t.status =#{c_status}
+		</if>
+		<if test="c_user_name != null and c_user_name !=''">
+			and t.user_name =#{c_user_name}
+		</if>
+		<if test="c_is_del != null and c_is_del !=''">
+			and t.is_del =#{c_is_del}
+		</if>
+		<if test="c_limit != null">
+			limit 0,#{c_limit}
+		</if>
+	</select>
+
+	<select id="countMap" parameterType="java.lang.Object"
+		resultType="java.lang.Integer">
+		SELECT
+		count(1)
+		FROM t_user AS t
+		WHERE 1=1
+		<if test="c_status != -10001">
+			and t.status =#{c_status}
+		</if>
+	</select>
+
+	<update id="del" parameterType="java.lang.Long">
+		update t_user set is_del = 1
+		where id = #{id}
+	</update>
+
+
+	<update id="updateScore" parameterType="java.lang.Object">
+		update t_user set score =
+		score + #{score}
+		where id = #{id} and (score + #{score}) >= 0
+	</update>
+
+</mapper>

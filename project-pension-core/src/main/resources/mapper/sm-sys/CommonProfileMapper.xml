@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.CommonProfileMapper">
+ 
+	<select id="getByProfileKey" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonProfileView">
+		SELECT
+			t.`id` as id, 
+			t.`time` as time,
+			t.`profileKey` as profileKey,
+			t.`profileVal` as profileVal,
+			t.`mark` as mark,
+			t.`status` as status
+		FROM
+			t_common_profile AS t
+			where 1=1
+			and profileKey = #{profileKey}
+	</select>
+	
+	<select id="getById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonProfileView">
+		SELECT
+			t.`id` as id, 
+			t.`time` as time,
+			t.`profileKey` as profileKey,
+			t.`profileVal` as profileVal,
+			t.`mark` as mark,
+			t.`status` as status
+		FROM
+			t_common_profile AS t
+			where 1=1
+			and id = #{id}
+	</select>
+	 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.CommonProfileDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.CommonProfileView">
+		SELECT
+			t.`id` as id, 
+			t.`time` as time,
+			t.`profileKey` as profileKey,
+			t.`profileVal` as profileVal,
+			t.`mark` as mark,
+			t.`status` as status
+		FROM
+			t_common_profile AS t
+			where 1=1
+	</select>
+	
+	
+	<update id="setValByKey" parameterType="java.lang.Object">
+		update t_common_profile set  profileVal = #{profileVal}
+		where profileKey = #{profileKey}
+	</update>
+	 
+</mapper>

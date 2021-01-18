@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.longjun.cto.framework.sm.cms.mapper.CmsContentMapper">
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		t.id as id,
+		t.parentid as parentid,
+		t.type_id as typeId,
+		t.title as title,
+		t.remark as remark,
+		t.contents as contents,
+		t.thumbimg
+		as thumbimg,
+		t.adminid as adminid,
+		t.time as time,
+		t.lastupdate as
+		lastupdate,
+		t.status as status,
+		t.is_top as isTop,
+		t.toptime as toptime,
+		t.seo_title as seoTitle,
+		t.seo_keywords as seoKeywords,
+		t.seo_description as seoDescription,
+		t.viewcount as viewcount,
+		t.is_image as isImage,
+		t.voide_images as voideImages,
+		t.viode_urls as
+		viodeUrls,
+		t.size as size,
+		t.is_voide as isVoide,
+		t.source as source,
+		t.wordcount as
+		wordcount,
+		t.is_del as isDel,
+		t.is_index as isIndex
+	</sql>
+
+	<select id="getByPage"
+		parameterType="com.longjun.cto.framework.sm.cms.entity.dto.CmsContentDto"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsContentView">
+		SELECT
+		t.id as id,
+		t.parentid as parentid,
+		t.type_id as typeId,
+		t.title as
+		title,
+		t.remark as remark,
+		t.contents as contents,
+		t.thumbimg as
+		thumbimg,
+		t.adminid as adminid,
+		t.time as time,
+		t.source as source,
+		t.lastupdate as
+		lastupdate,
+		t.status as status,
+		t.is_top as isTop,
+		t.toptime as toptime,
+		t.seo_title as seoTitle,
+		t.seo_keywords as
+		seoKeywords,
+		t.seo_description as seoDescription,
+		t.viewcount as
+		viewcount,
+		t.is_image as isImage,
+		t.voide_images as voideImages,
+		t.source as source,
+		t.viode_urls as
+		viodeUrls,
+		t.size as size,
+		t.is_voide
+		as isVoide,
+		t.wordcount as
+		wordcount,
+		t.is_del as isDel,
+		t.is_index as
+		isIndex,
+		ct.type_name as
+		typeName
+		FROM t_cms_content
+		AS t
+		left join
+		t_cms_content_type as ct
+		on
+		t.type_id = ct.id
+		WHERE 1 = 1
+		and t.is_del = 0
+		<if test="c_status != -10001">
+			and t.status = #{c_status}
+		</if>
+		<if test="c_title != null and c_title != ''">
+			and t.title like concat('%', #{c_title} , '%')
+		</if>
+		<if test="c_typeId != null and c_typeId != ''">
+			and t.type_id = #{c_typeId}
+		</if>
+		<if test="c_class_id != null and c_class_id != ''">
+			and ct.class_id = #{c_class_id}
+		</if>
+		<if
+			test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+			and t.time <![CDATA[>=]]>
+			#{c_startTime} and t.time <![CDATA[<=]]>
+			#{c_endTime}
+		</if>
+		order by t.time desc
+	</select>
+
+	<select id="findViewById" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsContentView">
+		SELECT
+		t.id as id,
+		t.parentid as parentid,
+		t.type_id as
+		typeId,
+		t.title as title,
+		t.remark as remark,
+		t.contents as contents,
+		t.thumbimg as thumbimg,
+		t.adminid as adminid,
+		t.time as time,
+		t.lastupdate as lastupdate,
+		t.status as status,
+		t.source as source,
+		t.is_top as isTop,
+		t.toptime as toptime,
+		t.seo_title as seoTitle,
+		t.seo_keywords as
+		seoKeywords,
+		t.seo_description as seoDescription,
+		t.viewcount as
+		viewcount,
+		t.is_image as isImage,
+		t.voide_images as
+		voideImages,
+		t.viode_urls as viodeUrls,
+		t.size as size,
+		t.is_voide as
+		isVoide,
+		t.wordcount as wordcount,
+		t.is_del as isDel,
+		ct.type_name as
+		typeName
+		FROM t_cms_content AS t
+		left join t_cms_content_type as ct
+		on
+		t.type_id
+		= ct.id
+		WHERE 1 = 1 and t.is_del = 0 and t.id = #{id}
+	</select>
+
+	<select id="listModelMap" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsContentView">
+		SELECT
+		t.id as id,
+		t.parentid as parentid,
+		t.type_id as
+		typeId,
+		t.title as
+		title,
+		t.remark as remark,
+		t.contents as contents,
+		t.thumbimg as
+		thumbimg,
+		t.adminid as adminid,
+		t.time as time,
+		t.source as
+		source,
+		t.lastupdate as
+		lastupdate,
+		t.status as status,
+		t.is_top as isTop,
+		t.toptime as toptime,
+		t.seo_title as seoTitle,
+		t.seo_keywords as
+		seoKeywords,
+		t.seo_description as seoDescription,
+		t.viewcount as
+		viewcount,
+		t.is_image as isImage,
+		t.voide_images as voideImages,
+		t.viode_urls as
+		viodeUrls,
+		t.size as size,
+		t.is_voide as isVoide,
+		t.wordcount as
+		wordcount,
+		t.is_del as isDel,
+		t.is_index as isIndex,
+		ct.type_name as typeName
+		FROM t_cms_content
+		AS t
+		left join
+		t_cms_content_type as ct
+		on t.type_id = ct.id
+		WHERE 1 = 1
+		and t.is_del = 0 
+		<if test="c_status != null">
+			and t.status =#{c_status}
+		</if>
+		<if test="c_type_id != null and c_type_id != ''">
+			and t.type_id =#{c_type_id}
+		</if>
+		<if test="c_is_index != null and c_is_index != ''">
+			and t.is_index =#{c_is_index}
+		</if>
+		<if test="c_is_del != null and c_is_del != ''">
+			and t.is_del =#{c_is_del}
+		</if>
+		<if test="c_limit != null">
+			limit 0,#{c_limit}
+		</if>
+	</select>
+
+	<select id="countMap" parameterType="java.lang.Object"
+		resultType="java.lang.Integer">
+		SELECT
+		count(1)
+		FROM t_cms_content AS t
+		WHERE 1=1
+		<if test="c_status != -10001">
+			and t.status =#{c_status}
+		</if>
+	</select>
+
+	<update id="del" parameterType="java.lang.Long">
+		update t_cms_content set is_del =
+		1
+		where id = #{id}
+	</update>
+
+
+	<select id="listByIndex" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsContentView">
+		SELECT
+		t.id as id,
+		t.parentid as parentid,
+		t.type_id as
+		typeId,
+		t.title as
+		title,
+		t.remark as remark,
+		t.contents as contents,
+		t.thumbimg as
+		thumbimg,
+		t.adminid as adminid,
+		t.time as time,
+		t.source as
+		source,
+		t.lastupdate as
+		lastupdate,
+		t.status as status,
+		t.is_top as isTop,
+		t.toptime as toptime,
+		t.seo_title as seoTitle,
+		t.seo_keywords as
+		seoKeywords,
+		t.seo_description as seoDescription,
+		t.viewcount as
+		viewcount,
+		t.is_image as isImage,
+		t.voide_images as voideImages,
+		t.viode_urls as
+		viodeUrls,
+		t.size as size,
+		t.is_voide as isVoide,
+		t.wordcount as
+		wordcount,
+		t.is_del as isDel,
+		t.is_index as isIndex,
+		ct.type_name as typeName
+		FROM t_cms_content
+		AS t
+		left join
+		t_cms_content_type as ct
+		on t.type_id = ct.id
+		WHERE 1 = 1
+		and t.is_del =
+		0 and t.is_index=1
+		and t.type_id = #{type} limit 0,#{size}
+	</select>
+
+	<select id="findLastOne" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsContentView">
+
+		SELECT
+		t.id as id,
+		t.parentid as parentid,
+		t.type_id as typeId,
+		t.title as
+		title,
+		t.remark as remark,
+		t.contents as contents,
+		t.thumbimg as
+		thumbimg,
+		t.adminid as adminid,
+		t.time as time,
+		t.source as source,
+		t.lastupdate as
+		lastupdate,
+		t.status as status,
+		t.is_top as isTop,
+		t.toptime as toptime,
+		t.seo_title as seoTitle,
+		t.seo_keywords as
+		seoKeywords,
+		t.seo_description as seoDescription,
+		t.viewcount as
+		viewcount,
+		t.is_image as isImage,
+		t.voide_images as voideImages,
+		t.viode_urls as
+		viodeUrls,
+		t.size as size,
+		t.is_voide as isVoide,
+		t.wordcount as
+		wordcount,
+		t.is_del as isDel,
+		t.is_index as isIndex,
+		ct.type_name as typeName
+		FROM t_cms_content
+		AS t
+		left join
+		t_cms_content_type as ct
+		on t.type_id = ct.id
+		WHERE 1 = 1
+		and t.is_del =
+		0
+		and t.id in (
+		select max(id) from t_cms_content where id <![CDATA[<]]>
+		#{id}
+		)
+		and t.type_id =
+		(
+		select type_id from t_cms_content where id = #{id}
+		)
+	</select>
+
+	<select id="findNextOne" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsContentView">
+		SELECT
+		t.id as id,
+		t.parentid as parentid,
+		t.type_id as typeId,
+		t.source
+		as source,
+		t.title as
+		title,
+		t.remark as remark,
+		t.contents as contents,
+		t.thumbimg as
+		thumbimg,
+		t.adminid as adminid,
+		t.time as time,
+		t.lastupdate as
+		lastupdate,
+		t.status as status,
+		t.is_top as isTop,
+		t.toptime as toptime,
+		t.seo_title as seoTitle,
+		t.seo_keywords as
+		seoKeywords,
+		t.seo_description as seoDescription,
+		t.viewcount as
+		viewcount,
+		t.is_image as isImage,
+		t.voide_images as voideImages,
+		t.viode_urls as
+		viodeUrls,
+		t.size as size,
+		t.is_voide as isVoide,
+		t.wordcount as
+		wordcount,
+		t.is_del as isDel,
+		t.is_index as isIndex,
+		ct.type_name as typeName
+		FROM t_cms_content
+		AS t
+		left join
+		t_cms_content_type as ct
+		on t.type_id = ct.id
+		WHERE 1 = 1
+		and t.is_del =
+		0
+		and t.id in (
+		select min(id) from t_cms_content where id <![CDATA[>]]>
+		#{id}
+		)
+		and t.type_id =
+		(
+		select type_id from t_cms_content where id = #{id}
+		)
+	</select>
+
+</mapper>

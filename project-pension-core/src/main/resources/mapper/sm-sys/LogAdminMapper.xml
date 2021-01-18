@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.LogAdminMapper">
+ 
+ 	<insert id="saveModel" parameterType="com.longjun.cto.framework.sm.sys.entity.model.LogAdminModel"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO `t_log_admin` ( `operater_id`, `operater_name`, `operater_role_id`, `operater_role_name`,
+		 `ip`, `event_use_id`, `module_name`, `event_contet`, `status`) VALUES 
+		 ( #{operaterId}, #{operaterName}, #{operaterRoleId}, #{operaterRoleName},
+		  #{ip}, #{eventUseId}, #{moduleName}, #{eventContet}, #{status})
+	</insert>
+ 
+	<select id="getById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.LogAdminView">
+		SELECT
+			t.`id` , 
+			t.`time`,
+			t.`operater_id` as operaterId,
+			t.`operater_name` as operaterName,
+			t.`operater_role_id` as operaterRoleId,
+			t.`operater_role_name` as operaterRoleName,
+			t.`ip` as ip,
+			t.`event_use_id` as eventUseId,
+			t.`module_name` as moduleName,
+			t.`event_contet` as eventContet,
+			t.`status` as status
+		FROM
+			t_log_admin AS t
+			where 1 = 1
+			and t.id = #{id}
+	</select>
+	
+	<select id="getByPage" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.LogAdminView">
+		SELECT
+			t.`id` , 
+			t.`time`,
+			t.`operater_id` as operaterId,
+			t.`operater_name` as operaterName,
+			t.`operater_role_id` as operaterRoleId,
+			t.`operater_role_name` as operaterRoleName,
+			t.`ip` as ip,
+			t.`event_use_id` as eventUseId,
+			t.`module_name` as moduleName,
+			t.`event_contet` as eventContet,
+			t.`status` as status
+		FROM
+			t_log_admin AS t
+			where 1 = 1
+			<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>]]> #{c_startTime} and t.time <![CDATA[<=]]> #{c_endTime}
+			</if>
+			
+			<if test="c_eventUseId != 0">
+				and t.`event_use_id` = #{c_eventUseId}
+			</if>
+			
+			<if test="c_keys != null and c_keys != ''">
+				and ip like concat('%',#{c_keys},'%')
+				or operater_name like concat('%',#{c_keys},'%')
+				or event_contet like concat('%',#{c_keys},'%')
+			</if>
+			
+			<if test="c_operaterName != null and c_operaterName != ''">
+				and operater_name like concat('%',#{c_operaterName},'%')
+			</if>
+			<if test="c_eventContet != null and c_eventContet != ''">
+				and event_contet like concat('%',#{c_eventContet},'%')
+			</if>
+	</select>
+	 
+</mapper>

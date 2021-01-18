@@ -1,0 +1,234 @@
+2021-01-12 09:12:22.425 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 09:12:23.361 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 09:12:38.310 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 09:12:38.717 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 09:14:10.066 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 09:14:11.963 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 09:14:28.744 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 09:14:29.152 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 09:59:34.276 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 09:59:35.200 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 09:59:50.575 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 09:59:50.983 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 10:00:26.625 WARN  com.baomidou.mybatisplus.mapper.SqlHelper Line:160 -
+				Warn: execute Method There are  2 results.
+2021-01-12 10:01:36.657 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 10:01:37.663 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 10:01:55.445 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 10:01:55.849 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 10:04:35.552 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 10:04:36.470 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 10:04:51.849 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 10:04:52.255 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 10:14:37.657 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 10:14:38.631 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 10:14:56.254 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 10:14:56.655 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 10:32:21.150 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 10:32:22.091 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 10:32:39.081 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 10:32:39.484 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 10:57:36.674 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 10:57:37.614 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 10:57:52.451 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 10:57:52.862 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:02:07.277 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:02:08.189 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:02:24.767 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:02:25.249 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:03:36.523 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:03:37.436 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:03:52.650 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:03:53.062 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:04:17.315 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:04:18.238 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:04:33.528 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:04:33.936 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:06:56.065 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:06:57.065 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:07:13.905 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:07:14.336 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:10:00.832 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:10:02.371 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:10:19.727 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:10:20.180 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:12:38.165 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:12:39.073 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:12:55.942 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:12:56.445 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:13:48.255 WARN  org.cleverframe.fastdfs.pool.TrackerLocator Line:109 -
+				TrackerAddressMap获取TrackerAddressState为null, key=/183.61.166.212:23000, 设置连接是否有效失败[true]
+2021-01-12 11:17:33.524 WARN  org.cleverframe.fastdfs.pool.TrackerLocator Line:109 -
+				TrackerAddressMap获取TrackerAddressState为null, key=/183.61.166.212:23000, 设置连接是否有效失败[true]
+2021-01-12 11:22:03.666 WARN  org.cleverframe.fastdfs.pool.TrackerLocator Line:109 -
+				TrackerAddressMap获取TrackerAddressState为null, key=/183.61.166.212:23000, 设置连接是否有效失败[true]
+2021-01-12 11:30:28.779 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:30:29.728 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:30:46.056 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:30:46.456 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:31:32.155 WARN  org.cleverframe.fastdfs.pool.TrackerLocator Line:109 -
+				TrackerAddressMap获取TrackerAddressState为null, key=/183.61.166.212:23000, 设置连接是否有效失败[true]
+2021-01-12 11:34:18.725 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:34:19.626 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:34:34.495 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:34:34.899 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:45:40.446 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:45:41.389 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:45:57.245 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:45:57.650 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:47:08.700 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:47:09.769 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:47:25.791 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:47:26.192 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 11:56:52.547 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 11:56:53.479 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 11:57:10.208 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 11:57:10.621 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 13:35:48.750 WARN  com.baomidou.mybatisplus.mapper.SqlHelper Line:160 -
+				Warn: execute Method There are  2 results.
+2021-01-12 13:40:39.328 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 13:40:40.282 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 13:40:56.520 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 13:40:56.924 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 13:57:22.691 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 13:57:23.626 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 13:57:28.875 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 13:57:40.246 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 14:16:31.825 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 14:16:32.772 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 14:16:47.644 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 14:16:48.048 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 14:18:32.383 WARN  com.baomidou.mybatisplus.mapper.SqlHelper Line:160 -
+				Warn: execute Method There are  2 results.
+2021-01-12 14:37:56.726 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 14:37:57.641 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 14:38:12.943 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 14:38:13.355 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 14:41:53.968 WARN  org.cleverframe.fastdfs.pool.TrackerLocator Line:109 -
+				TrackerAddressMap获取TrackerAddressState为null, key=/183.61.166.212:23000, 设置连接是否有效失败[true]
+2021-01-12 14:41:56.348 WARN  org.cleverframe.fastdfs.pool.TrackerLocator Line:109 -
+				TrackerAddressMap获取TrackerAddressState为null, key=/183.61.166.212:23000, 设置连接是否有效失败[true]
+2021-01-12 14:49:32.427 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 14:49:33.422 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 14:49:48.443 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 14:49:48.851 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 14:53:16.600 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 14:53:17.711 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 14:53:33.775 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 14:53:34.181 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 14:55:58.409 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 14:55:59.305 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 14:56:15.660 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 14:56:16.094 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-12 15:24:40.206 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-12 15:24:41.114 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-12 15:24:56.169 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 15:24:56.575 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.

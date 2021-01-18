@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.cms.mapper.CmsBannerMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.location_id as locationId,  
+		t.title as title,  
+		t.urls as urls,  
+		t.images as images,  
+		t.b_sort as bSort,  
+		t.iswai as iswai,  
+		t.adminid as adminid,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.cms.entity.dto.CmsBannerDto" 
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsBannerView">
+		SELECT
+			t.id as id,  
+			t.location_id as locationId,  
+			t.title as title,  
+			t.urls as urls,  
+			t.images as images,  
+			t.b_sort as bSort,  
+			t.iswai as iswai,  
+			t.adminid as adminid,  
+			t.time as time,  
+			t.lastupdate as lastupdate,  
+			t.status as status,  
+			t.is_del as isDel ,
+			bl.banner_client as bannerClient ,
+			bl.b_width as bWidth ,
+			bl.b_hight as bHight ,
+			bl.location_name as locationName ,
+			bl.is_more as isMore ,
+			bl.is_ad as isAd 
+		FROM t_cms_banner AS t
+			left join t_cms_banner_location as bl
+			on t.location_id = bl.id
+		WHERE 1 = 1 and t.is_del = 0
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_bannerClient != null and c_bannerClient != ''">
+		 	and bl.banner_client = #{c_bannerClient}
+		</if>
+		<if test="c_isAd != null and c_isAd != ''">
+		 	and bl.is_ad = #{c_isAd}
+		</if>
+		<if test="c_locationName != null and c_locationName != ''">
+		 	and bl.location_name like concat('%',#{c_locationName},'%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsBannerView">
+		SELECT
+			t.id as id,  
+			t.location_id as locationId,  
+			t.title as title,  
+			t.urls as urls,  
+			t.images as images,  
+			t.b_sort as bSort,  
+			t.iswai as iswai,  
+			t.adminid as adminid,  
+			t.time as time,  
+			t.lastupdate as lastupdate,  
+			t.status as status,  
+			t.is_del as isDel ,
+			bl.banner_client as bannerClient ,
+			bl.b_width as bWidth ,
+			bl.b_hight as bHight ,
+			bl.location_name as locationName ,
+			bl.is_more as isMore ,
+			bl.is_ad as isAd 
+		FROM t_cms_banner AS t
+			left join t_cms_banner_location as bl
+			on t.location_id = bl.id
+		WHERE 1 = 1  and t.is_del = 0  and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsBannerView">
+		SELECT
+			t.id as id,  
+			t.location_id as locationId,  
+			t.title as title,  
+			t.urls as urls,  
+			t.images as images,  
+			t.b_sort as bSort,  
+			t.iswai as iswai,  
+			t.adminid as adminid,  
+			t.time as time,  
+			t.lastupdate as lastupdate,  
+			t.status as status,  
+			t.is_del as isDel ,
+			bl.banner_client as bannerClient ,
+			bl.b_width as bWidth ,
+			bl.b_hight as bHight ,
+			bl.location_name as locationName ,
+			bl.is_more as isMore ,
+			bl.is_ad as isAd 
+		FROM t_cms_banner AS t
+			left join t_cms_banner_location as bl
+			on t.location_id = bl.id
+		WHERE 1 = 1  and t.is_del = 0
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		
+		<if test="c_locationId != null and c_locationId != ''">
+		 	and bl.id =#{c_locationId}
+		</if>
+		
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_cms_banner AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_cms_banner set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

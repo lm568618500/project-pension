@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.eims.cto</groupId>
+    <artifactId>project-pension</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <dependencies>
+  	<dependency>
+		<groupId>com.html2.image</groupId>
+		<artifactId>html</artifactId>
+		<version>0.9</version>
+		<scope>system</scope> 
+		<systemPath>${project.basedir}/lib/html2image0.9.jar</systemPath>
+	</dependency>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-data-jpa</artifactId>
+  	</dependency>
+	  <dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-devtools</artifactId>
+		  <!-- 有人说optional一定要配置成true才有效, 但我调试完感觉不加optional也有效 -->
+		  <optional>true</optional>
+	  </dependency>
+  </dependencies>
+  <artifactId>project-pension-core</artifactId>
+</project>

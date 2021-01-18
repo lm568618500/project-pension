@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.pay.union.mapper.UnionQueryMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.status as status,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.is_del as isDel,  
+		t.mer_id as merId,  
+		t.query_type as queryType,  
+		t.pay_waybillno as payWaybillno,  
+		t.qrtype as qrtype,  
+		t.pay_trans_date as payTransDate,  
+		t.pay_query_id as payQueryId,  
+		t.pay_resp_amount as payRespAmount,  
+		t.pay_resp_code as payRespCode,  
+		t.pay_resp_seqno as payRespSeqno,  
+		t.pay_resp_pay_time as payRespPayTime,  
+		t.pay_resp_memo as payRespMemo,  
+		t.pay_resp_payway as payRespPayway,  
+		t.pay_resp_mac as payRespMac,  
+		t.pay_resp_termid as payRespTermid,  
+		t.pay_resp_shopid as payRespShopid,  
+		t.pay_resp_cleardate as payRespCleardate,  
+		t.pay_resp_status as payRespStatus,  
+		t.refund_no as refundNo,  
+		t.refund_resp_refundtime as refundRespRefundtime,  
+		t.refund_resp_refundstatus as refundRespRefundstatus,  
+		t.refund_resp_refundamount as refundRespRefundamount,  
+		t.refund_resp_mac as refundRespMac,  
+		t.refund_resp_msg as refundRespMsg,  
+		t.refund_resp_code as refundRespCode ,
+		t.refund_query_id as refundQueryId
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.pay.union.entity.dto.UnionQueryDto" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionQueryView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_query AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionQueryView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_query AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.union.entity.view.UnionQueryView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_union_query AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_union_query AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_union_query set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

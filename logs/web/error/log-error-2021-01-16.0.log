@@ -1,0 +1,6 @@
+2021-01-16 09:19:07.857 [http-nio-80-exec-1] ERROR com.longjun.cto.framework.sm.sys.service.ShiroService
+				Line:59  -
+				通过Token 查询AdminToken未查询到记录, token [f88b1ef8-711f-4ca9-b2eb-fd58f5b9b8ea]
+2021-01-16 09:51:19.232 [http-nio-80-exec-10] ERROR com.longjun.cto.framework.sm.sys.service.ShiroService
+				Line:59  -
+				通过Token 查询AdminToken未查询到记录, token [0a26388a-7dec-4ad0-a4c3-94fbe5c83459]

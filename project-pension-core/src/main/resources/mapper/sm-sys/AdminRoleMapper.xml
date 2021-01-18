@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.AdminRoleMapper">
+
+	<insert id="saveModel" parameterType="com.longjun.cto.framework.sm.sys.entity.model.AdminRoleModel"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO `t_admin_role` ( `admin_id`, `role_id`,  `status`) VALUES ( #{adminId}, #{roleId},  #{status})
+	</insert>
+	
+	<update id="setStatusByAdminId" parameterType="java.lang.Object">
+		update t_admin_role set status = #{status}
+		where admin_id = #{adminId}
+	</update> 
+	 
+	<update id="setStatusByRoleId" parameterType="java.lang.Object">
+		update t_admin_role set status = #{status}
+		where role_id = #{roleId}
+	</update>
+	 
+</mapper>

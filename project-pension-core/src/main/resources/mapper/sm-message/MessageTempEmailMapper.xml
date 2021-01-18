@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.message.mapper.MessageTempEmailMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.mech_id as mechId,  
+		t.temp_uid as tempUid,  
+		t.time as time,  
+		t.status as status,  
+		t.email_content as emailContent,  
+		t.emailimmediately as emailimmediately,  
+		t.lastupdate as lastupdate,  
+		t.tips as tips 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.message.entity.dto.MessageTempEmailDto" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageTempEmailView">
+		SELECT 
+		  t.id AS id,
+		  t.mech_id AS mechId,
+		  t.temp_uid AS tempUid,
+		  t.time AS TIME,
+		  t.status AS STATUS,
+		  t.email_content AS emailContent,
+		  t.emailimmediately AS emailimmediately,
+		  t.lastupdate AS lastupdate,
+		  t.tips AS tips,
+		  m.`mech_name` AS mechName,
+		  m.`lock_status` AS mechLockStatus,
+		  mt.`temp_name` AS tempName,
+		  m.`support_email` AS mechSupportEmail,
+		  m.`support_sms` AS mechSupportSms,
+		  m.`support_push` AS mechSupportPush 
+		FROM
+		  t_message_temp_email AS t 
+		  LEFT JOIN t_message_mech AS m 
+		    ON t.`mech_id` = m.`id` 
+		  LEFT JOIN `t_message_temp` AS mt 
+		    ON t.`temp_uid` = mt.`temp_uid` 
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_tempName != null and c_tempName !=''">
+		 	and mt.`temp_name` like concat('%', #{c_tempName},'%')
+		</if>
+		<if test="c_emailContent != null and c_emailContent !=''">
+		 	and t.email_content like concat('%', #{c_emailContent},'%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageTempEmailView">
+			SELECT 
+			  t.id AS id,
+			  t.mech_id AS mechId,
+			  t.temp_uid AS tempUid,
+			  t.time AS TIME,
+			  t.status AS STATUS,
+			  t.email_content AS emailContent,
+			  t.emailimmediately AS emailimmediately,
+			  t.lastupdate AS lastupdate,
+			  t.tips AS tips,
+			  m.`mech_name` AS mechName,
+			  m.`lock_status` AS mechLockStatus,
+			  mt.`temp_name` AS tempName,
+			  m.`support_email` AS mechSupportEmail,
+			  m.`support_sms` AS mechSupportSms,
+			  m.`support_push` AS mechSupportPush 
+			FROM
+			  t_message_temp_email AS t 
+			  LEFT JOIN t_message_mech AS m 
+			    ON t.`mech_id` = m.`id` 
+			  LEFT JOIN `t_message_temp` AS mt 
+			    ON t.`temp_uid` = mt.`temp_uid` 
+			WHERE 1 = 1 
+		 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageTempEmailView">
+		SELECT 
+			  t.id AS id,
+			  t.mech_id AS mechId,
+			  t.temp_uid AS tempUid,
+			  t.time AS TIME,
+			  t.status AS STATUS,
+			  t.email_content AS emailContent,
+			  t.emailimmediately AS emailimmediately,
+			  t.lastupdate AS lastupdate,
+			  t.tips AS tips,
+			  m.`mech_name` AS mechName,
+			  m.`lock_status` AS mechLockStatus,
+			  mt.`temp_name` AS tempName,
+			  m.`support_email` AS mechSupportEmail,
+			  m.`support_sms` AS mechSupportSms,
+			  m.`support_push` AS mechSupportPush 
+			FROM
+			  t_message_temp_email AS t 
+			  LEFT JOIN t_message_mech AS m 
+			    ON t.`mech_id` = m.`id` 
+			  LEFT JOIN `t_message_temp` AS mt 
+			    ON t.`temp_uid` = mt.`temp_uid` 
+			WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+			limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_message_temp_email AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_message_temp_email set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

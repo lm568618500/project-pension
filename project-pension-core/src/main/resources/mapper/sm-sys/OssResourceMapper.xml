@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.sys.mapper.OssResourceMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.res_name as resName,  
+		t.res_size as resSize,  
+		t.suffix as suffix,  
+		t.oss_type as ossType,  
+		t.file_hash as fileHash,  
+		t.ip as ip,  
+		t.group as `group`,  
+		t.remote_res_path as remoteResPath,  
+		t.remote_res_full_path as remoteResFullPath,  
+		t.pre_view_path as preViewPath 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.sys.entity.dto.OssResourceDto" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.OssResourceView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_oss_resource AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_resName != null and c_resName != ''">
+		 	and t.res_name like concat('%', #{c_resName} , '%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.OssResourceView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_oss_resource AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.OssResourceView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_oss_resource AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		limit 0,#{c_limit}
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.sys.entity.view.OssResourceView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_oss_resource AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	 
+</mapper>

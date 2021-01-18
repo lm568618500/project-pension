@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.pay.mapper.PayOrderMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.go_pay_time as goPayTime,  
+		t.pay_order_id as payOrderId,  
+		t.mch_id as mchId,  
+		t.mch_order_no as mchOrderNo,  
+		t.channel_id as channelId,  
+		t.channel_items_id as channelItemsId,  
+		t.amount as amount,  
+		t.currency as currency,  
+		t.status as status,  
+		t.client_ip as clientIp,  
+		t.device as device,  
+		t.subject as subject,  
+		t.body as body,  
+		t.extra as extra,  
+		t.api_resp as apiResp,  
+		t.err_code as errCode,  
+		t.err_msg as errMsg,  
+		t.param1 as param1,  
+		t.param2 as param2,  
+		t.notify_url as notifyUrl,  
+		t.notify_count as notifyCount,  
+		t.last_notify_time as lastNotifyTime,  
+		t.expire_time as expireTime,  
+		t.pay_succ_time as paySuccTime,  
+		t.buz_notify_url as buzNotifyUrl,  
+		t.buz_callback_url as buzCallbackUrl,  
+		t.buz_notify_resp as buzNotifyResp,  
+		t.is_del as isDel  
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.pay.entity.dto.PayOrderDto" 
+		resultType="com.longjun.cto.framework.sm.pay.entity.view.PayOrderView">
+		SELECT 
+		  t.id AS id,
+		  t.time AS TIME,
+		  t.lastupdate AS lastupdate,
+		  t.go_pay_time AS goPayTime,
+		  t.pay_order_id AS payOrderId,
+		  t.mch_id AS mchId,
+		  t.mch_order_no AS mchOrderNo,
+		  t.channel_id AS channelId,
+		  t.channel_items_id AS channelItemsId,
+		  t.amount AS amount,
+		  t.currency AS currency,
+		  t.status AS STATUS,
+		  t.client_ip AS clientIp,
+		  t.device AS device,
+		  t.subject AS SUBJECT,
+		  t.body AS body,
+		  t.extra AS extra,
+		  t.api_resp AS apiResp,
+		  t.err_code AS errCode,
+		  t.err_msg AS errMsg,
+		  t.param1 AS param1,
+		  t.param2 AS param2,
+		  t.notify_url AS notifyUrl,
+		  t.notify_count AS notifyCount,
+		  t.notify_xml AS notifyXml,
+		  t.last_notify_time AS lastNotifyTime,
+		  t.expire_time AS expireTime,
+		  t.pay_succ_time AS paySuccTime,
+		  t.buz_notify_url AS buzNotifyUrl,
+		  t.buz_callback_url as buzCallbackUrl,  
+		  t.buz_notify_count AS buzNotifyCount,
+		  t.buz_notify_resp AS buzNotifyResp,
+		  t.is_del AS isDel ,
+		  mi.`mch_name` AS mchName , 
+		  mi.`status` AS mchStatus ,
+		  pc.`channel_name` AS channelName ,
+		  cid.`channel_items_name` AS channelItemsName
+		  
+		FROM
+		  t_pay_order AS t 
+		  LEFT JOIN `t_pay_mch_info` AS mi
+		  ON t.`mch_id` = mi.`mch_id`
+		  LEFT JOIN `t_pay_channel_dict` AS pc
+		  ON t.`channel_id` = pc.`id` 
+		  LEFT JOIN `t_pay_channel_item_dict` AS cid
+		  ON t.`channel_items_id` = cid.`id` 
+		WHERE 1 = 1  
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_mchOrderNo != null and c_mchOrderNo!= ''">
+		 	and t.mch_order_no like concat('%', #{c_mchOrderNo} , '%')
+		</if>
+		<if test="c_payOrderId != null and c_payOrderId !=''">
+		 	and t.pay_order_id like concat('%', #{c_payOrderId} , '%')
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.entity.view.PayOrderView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_order AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.pay.entity.view.PayOrderView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_pay_order AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_pay_order AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_pay_order set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.message.mapper.MessageSmsMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.mobile as mobile,  
+		t.temp_id as tempId,  
+		t.content as content,  
+		t.temp_content as tempContent,  
+		t.temp_params_bind as tempParamsBind,  
+		t.send_time as sendTime,  
+		t.mech_id as mechId,  
+		t.setting_id as settingId,  
+		t.status as status,  
+		t.create_time as createTime,  
+		t.is_del as isDel 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.message.entity.dto.MessageSmsDto" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageSmsView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_message_sms AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_mobile != null and c_mobile != ''">
+		 	and t.mobile like concat('%', #{c_mobile} , '%')
+		</if>
+		<if test="c_tempUid != null and c_tempUid != ''">
+		 	and t.temp_id =  #{c_tempUid} 
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+		order by t.id desc
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageSmsView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_message_sms AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.message.entity.view.MessageSmsView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_message_sms AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+			limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_message_sms AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_message_sms set is_del = 1
+		 where id = #{id}
+	</update>
+	 
+</mapper>

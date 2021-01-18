@@ -1,0 +1,78 @@
+2021-01-07 19:42:05.863 INFO  com.CqcWebDistApp Line:28  -
+				******** CqcWebDistApp Start ... ********
+2021-01-07 19:42:06.342 INFO  com.CqcWebDistApp Line:50  -
+				Starting CqcWebDistApp on kkk with PID 11680 (started by Administrator in F:\吉万\project-pension\project-pension)
+2021-01-07 19:42:06.343 INFO  com.CqcWebDistApp Line:659 -
+				No active profile set, falling back to default profiles: default
+2021-01-07 19:42:11.938 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner Line:166 -
+				No MyBatis mapper was found in '[com]' package. Please check your configuration.
+2021-01-07 19:42:12.794 INFO  com.eims.cto.framework.common.configuration.MybatisPlusConfig Line:144 -
+				MapperScannerConfigurer 注入开始...
+2021-01-07 19:42:12.872 WARN  org.springframework.context.annotation.ConfigurationClassPostProcessor Line:381 -
+				Cannot enhance @Configuration bean definition 'mybatisPlusConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-01-07 19:42:13.634 INFO  org.apache.coyote.http11.Http11NioProtocol Line:180 -
+				Initializing ProtocolHandler ["http-nio-80"]
+2021-01-07 19:42:13.644 INFO  org.apache.catalina.core.StandardService Line:180 -
+				Starting service [Tomcat]
+2021-01-07 19:42:13.644 INFO  org.apache.catalina.core.StandardEngine Line:180 -
+				Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-01-07 19:42:13.648 INFO  org.apache.catalina.core.AprLifecycleListener Line:180 -
+				The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\PxMEWNET;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;d:\Program Files\proeWildfire 5.0\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\Redis-x64-3.2.100;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
+2021-01-07 19:42:13.760 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:180 -
+				Initializing Spring embedded WebApplicationContext
+2021-01-07 19:42:14.228 INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure Line:56  -
+				Init DruidDataSource
+2021-01-07 19:42:14.596 INFO  com.alibaba.druid.pool.DruidDataSource Line:930 -
+				{dataSource-1} inited
+2021-01-07 19:42:17.294 INFO  com.eims.cto.framework.common.configuration.filter.file.FileFilter Line:44  -
+				FileFilter拦截初始化includesUrl ...
+2021-01-07 19:42:17.294 INFO  com.eims.cto.framework.common.configuration.filter.file.FileFilter Line:47  -
+				FileFilter拦截初始化includes AllInCludesUrl - > /image/download,
+2021-01-07 19:42:17.296 INFO  com.eims.cto.framework.common.configuration.filter.file.FileFilter Line:52  -
+				FileFilter拦截初始化includes url - > /image/download
+2021-01-07 19:42:17.310 INFO  com.eims.cto.framework.common.configuration.MultipartConf Line:24  -
+				文件上传配置注入 ,maxFileSize [100Mb] , maxRequestSize [100Mb]
+2021-01-07 19:42:18.824 INFO  org.dozer.config.GlobalSettings Line:113 -
+				Trying to find Dozer configuration file: dozer.properties
+2021-01-07 19:42:18.831 WARN  org.dozer.config.GlobalSettings Line:118 -
+				Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-01-07 19:42:18.833 INFO  org.dozer.DozerInitializer Line:75  -
+				Initializing Dozer. Version: 5.5.0, Thread Name: main
+2021-01-07 19:42:18.836 INFO  org.dozer.jmx.JMXPlatformImpl Line:66  -
+				Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-01-07 19:42:18.836 INFO  org.dozer.jmx.JMXPlatformImpl Line:66  -
+				Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-01-07 19:42:18.837 INFO  org.dozer.DozerBeanMapper Line:175 -
+				Initializing a new instance of dozer bean mapper.
+2021-01-07 19:42:26.110 INFO  com.eims.cto.framework.plugins.sensiwords.BannerFilter Line:84  -
+				Linux配置文件[/data/config/sensi_words/sensi_words.txt]未找到,进行jar文件本地读取
+2021-01-07 19:42:27.273 INFO  com.eims.cto.framework.plugins.email.EmailHelper Line:49  -
+				{default={host=smtp.163.com, port=25, from=w0ww123@163.com, user=w0ww123@163.com, pass=yangxuan6251}}
+2021-01-07 19:42:27.742 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:235 -
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-07 19:42:28.123 INFO  io.lettuce.core.EpollProvider Line:101 -
+				Starting without optional epoll library
+2021-01-07 19:42:28.124 INFO  io.lettuce.core.KqueueProvider Line:101 -
+				Starting without optional kqueue library
+2021-01-07 19:42:28.324 INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Line:69  -
+				Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-01-07 19:42:29.105 INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Line:151 -
+				Context refreshed
+2021-01-07 19:42:29.118 INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Line:154 -
+				Found 1 custom documentation plugin(s)
+2021-01-07 19:42:29.149 INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Line:41  -
+				Scanning for api listing references
+2021-01-07 19:42:29.210 INFO  org.apache.coyote.http11.Http11NioProtocol Line:180 -
+				Starting ProtocolHandler ["http-nio-80"]
+2021-01-07 19:42:29.211 INFO  org.apache.tomcat.util.net.NioSelectorPool Line:180 -
+				Using a shared selector for servlet write/read
+2021-01-07 19:42:29.229 INFO  com.CqcWebDistApp Line:59  -
+				Started CqcWebDistApp in 23.255 seconds (JVM running for 24.204)
+2021-01-07 19:42:29.232 INFO  com.longjun.cto.framework.project.pension.runner.StartupRunner Line:38  -
+				项目启动初始化runner ....正在进行数据初始化...
+2021-01-07 19:42:29.237 INFO  com.longjun.cto.framework.project.pension.runner.StartupRunner Line:30  -
+				清除 *buz-cache-standard-* 缓存
+2021-01-07 19:42:29.237 INFO  com.longjun.cto.framework.project.pension.runner.StartupRunner Line:40  -
+				项目启动初始化runner ....数据初始化完成...
+2021-01-07 19:42:29.237 INFO  com.CqcWebDistApp Line:30  -
+				******** CqcWebDistApp End ... ********

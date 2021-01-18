@@ -1,0 +1,100 @@
+package me.zhyd.oauth.request;
+
+import com.alipay.api.AlipayApiException;
+import com.alipay.api.AlipayClient;
+import com.alipay.api.DefaultAlipayClient;
+import com.alipay.api.request.AlipaySystemOauthTokenRequest;
+import com.alipay.api.request.AlipayUserInfoShareRequest;
+import com.alipay.api.response.AlipaySystemOauthTokenResponse;
+import com.alipay.api.response.AlipayUserInfoShareResponse;
+
+import cn.hutool.core.convert.Convert;
+import me.zhyd.oauth.config.AuthConfig;
+import me.zhyd.oauth.config.AuthSource;
+import me.zhyd.oauth.exception.AuthException;
+import me.zhyd.oauth.model.AuthCallback;
+import me.zhyd.oauth.model.AuthToken;
+import me.zhyd.oauth.model.AuthUser;
+import me.zhyd.oauth.model.AuthUserGender;
+import me.zhyd.oauth.utils.StringUtils;
+import me.zhyd.oauth.utils.UrlBuilder;
+
+/**
+ * 支付宝登录
+ *
+ * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @version 1.0
+ * @since 1.8
+ */
+public class AuthAlipayRequest extends BaseAuthRequest {
+
+	private AlipayClient alipayClient;
+
+	public AuthAlipayRequest(AuthConfig config) {
+		super(config, AuthSource.ALIPAY);
+		this.alipayClient = new DefaultAlipayClient(AuthSource.ALIPAY.accessToken(), config.getClientId(),
+				config.getClientSecret(), "json", "UTF-8", config.getAlipayPublicKey(), "RSA2");
+	}
+
+	@Override
+	protected AuthToken getAccessToken(AuthCallback authCallback) {
+		AlipaySystemOauthTokenRequest request = new AlipaySystemOauthTokenRequest();
+		request.setGrantType("authorization_code");
+		request.setCode(authCallback.getAuth_code());
+		AlipaySystemOauthTokenResponse response = null;
+		try {
+			response = this.alipayClient.execute(request);
+		} catch (Exception e) {
+			throw new AuthException("Unable to get token from alipay using code [" + authCallback.getAuth_code() + "]",
+					e);
+		}
+		if (!response.isSuccess()) {
+			throw new AuthException(response.getSubMsg());
+		}
+		AuthToken ret = new AuthToken();
+		ret.setAccessToken(response.getAccessToken());
+		ret.setUid(response.getUserId());
+		ret.setExpireIn(Convert.toInt(response.getExpiresIn()));
+		ret.setRefreshToken(response.getRefreshToken());
+		return ret;
+	}
+
+	@Override
+	protected AuthUser getUserInfo(AuthToken authToken) {
+		String accessToken = authToken.getAccessToken();
+		AlipayUserInfoShareRequest request = new AlipayUserInfoShareRequest();
+		AlipayUserInfoShareResponse response = null;
+		try {
+			response = this.alipayClient.execute(request, accessToken);
+		} catch (AlipayApiException e) {
+			throw new AuthException(e.getErrMsg(), e);
+		}
+		if (!response.isSuccess()) {
+			throw new AuthException(response.getSubMsg());
+		}
+
+		String province = response.getProvince(), city = response.getCity();
+		String location = String.format("%s %s", StringUtils.isEmpty(province) ? "" : province,
+				StringUtils.isEmpty(city) ? "" : city);
+		AuthUser ret = new AuthUser();
+		ret.setUuid(response.getUserId());
+		ret.setUsername(StringUtils.isEmpty(response.getUserName()) ? response.getNickName() : response.getUserName());
+		ret.setNickname(response.getNickName());
+		ret.setAvatar(response.getAvatar());
+		ret.setLocation(location);
+		ret.setGender(AuthUserGender.getRealGender(response.getGender()));
+		ret.setToken(authToken);
+		ret.setSource(AuthSource.ALIPAY);
+		return ret;
+	}
+
+	/**
+	 * 返回认证url，可自行跳转页面
+	 *
+	 * @return 返回授权地址
+	 */
+	@Override
+	public String authorize() {
+		return UrlBuilder.getAlipayAuthorizeUrl(config.getClientId(), config.getRedirectUri(), config.getState());
+	}
+}

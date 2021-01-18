@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longjun.cto.framework.sm.users.mapper.UserAttributeMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		t.id as id,  
+		t.time as time,  
+		t.lastupdate as lastupdate,  
+		t.status as status,  
+		t.is_del as isDel,  
+		t.user_id as userId,  
+		t.attr_type as attrType,  
+		t.attr_id as attrId 
+    </sql>
+ 
+	<select id="getByPage" parameterType="com.longjun.cto.framework.sm.users.entity.dto.UserAttributeDto" 
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserAttributeView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_user_attribute AS t
+		WHERE 1 = 1 
+		<if test="c_status != -10001">
+		 	and t.status = #{c_status}
+		</if>
+		<if test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+		 	and t.time <![CDATA[>=]]> #{c_startTime}  and t.time <![CDATA[<=]]> #{c_endTime}
+		</if>
+	</select>
+	
+	<select id="findViewById" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserAttributeView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_user_attribute AS t
+		WHERE 1=1 and t.id = #{id}
+	</select>
+	
+	<select id="listModelMap" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserAttributeView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_user_attribute AS t
+		WHERE 1=1 
+		<if test="c_status != null">
+		 	and t.status =#{c_status}
+		</if>
+		<if test="c_limit != null">
+		 	limit 0,#{c_limit}
+		</if>
+	</select>
+	
+	<select id="countMap" parameterType="java.lang.Object" 
+		resultType="java.lang.Integer">
+		SELECT
+			count(1)
+		FROM t_user_attribute AS t
+		WHERE 1=1 
+		<if test="c_status != -10001">
+		 	and t.status =#{c_status}
+		</if>
+	</select>
+	
+	<update id="del" parameterType="java.lang.Long">
+		 update t_user_attribute set is_del = -1
+		 where id = #{id}
+	</update>
+	
+	<select id="listByUserIdandAttrType" parameterType="java.lang.Object" 
+		resultType="com.longjun.cto.framework.sm.users.entity.view.UserAttributeView">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM t_user_attribute AS t
+		WHERE 1=1 and t.is_del=0 and t.user_id = #{c_userId} and t.attr_type = #{c_attrType}
+		
+	</select>
+	
+	<update id="delByUserIdandAttrType" parameterType="java.lang.Object">
+		 update t_user_attribute set is_del = -1
+		 where user_id = #{c_userId} and attr_type = #{c_attrType}
+	</update>
+	 
+</mapper>

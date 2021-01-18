@@ -1,0 +1,52 @@
+开发库链接地址：
+	url : 192.168.1.119
+	user : longjun_test
+	password : 123456
+	
+svn地址：
+	svn://39.100.60.152/dev/project-cqc
+	cqc_liuming=a8GxOHOHGF5C132X
+	cqc_meishunfa=EbyIs4bwtSglNuyQ
+	cqc_dengyongming=YBvHmAAPi6Y2iQyf
+	
+maven私服
+	参考setting.xml
+	
+代码生成器注意：
+	数据库表必须存在id, time , lastupdate , status(一般用于上下架,1上架，0下架) , is_del(0正常，-1删除) 字段。
+	目前支持数据库字段类型：
+	BIGINT("BIGINT", "java.lang.Long" , null),
+	TIMESTAMP("TIMESTAMP", "java.util.Date" , "java.util.Date"),
+	DATE("DATE", "java.util.Date" , "java.util.Date"),
+	DATETIME("DATETIME", "java.util.Date" , "java.util.Date"),
+	DECIMAL("DECIMAL", "java.math.BigDecimal" , "java.math.BigDecimal"),
+	TEXT("TEXT", "java.lang.String" , null),
+	LONGTEXT("LONGTEXT", "java.lang.String" , null),
+	VARCHAR("VARCHAR", "java.lang.String" , null),
+	INT("INT", "java.lang.Integer" , null),
+	TINYINT("TINYINT", "java.lang.Integer" , null),
+	DOUBLE("DOUBLE", "java.lang.Double" , null),
+	FLOAT("FLOAT", "java.lang.Float" , null),
+	BIGINTUNSIGNED("BIGINT UNSIGNED", "java.lang.Long" , null),
+	BIT("BIT", "java.lang.Boolean" , null),
+	CHAR("CHAR", "java.lang.Integer" , null),
+	
+	代码生成器会生成页面、java代码(包含model/mapper/xml/service/web)，生成之后，可将com文件夹直接复制至core模块的src/main/java下。然后将业务实现导入java.util.date包，同时，将生成的web
+文件夹复制至project-cqc-admin模块中，不要讲web放置core中。mapper文件夹下的.xml移动至core模块下的src/resources/mapper/cqc中.代码生成器的templates直接复制到core模块下的src/main/resoures即可
+	管理端的控制类继承需要修改为CqcAdminBaseController.java
+	前台控制类需要继承CqcWebBaseController.java
+	
+	父包 com.eims.cto.framework
+	子包 project.cqc
+	模板路径 /mgn/project/cqc
+
+后台访问路径：
+	http://127.0.0.1/mgn/index
+	admin/1234567
+
+国际化：
+	framework-core 中加入了国际化模块;
+		技术角度,我们在视图使用的是freemaker,使用<@i18N key="hello" lag="en" /> 标签对即可,key为国际化key,lag为语言,语言控制不要在前端进行控制
+		直接使用即可;<@i18N key="hello"  /> ,后台再定义一组拦截器即可;Java中  I18NKit.getMsg(key + "", Language.getLag(lag + "")); 这个方法是传入了语言,
+		程序直接使用 I18NKit.getMsg(key + ""); 即可;
+	

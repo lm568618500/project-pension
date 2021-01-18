@@ -1,0 +1,4 @@
+# Project exclude paths
+/project-pension-admin/target/
+/project-pension-core/target/
+/project-pension-web/target/

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.longjun.cto.framework.sm.cms.mapper.CmsFeedAckMapper">
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		t.id as id,
+		t.time as time,
+		t.lastupdate as lastupdate,
+		t.status as status,
+		t.is_del as isDel,
+		t.feed_no as feedNo,
+		t.admin_id as
+		adminId,
+		t.ack_time as ackTime,
+		t.ack_content as ackContent
+	</sql>
+
+	<select id="getByPage"
+		parameterType="com.longjun.cto.framework.sm.cms.entity.dto.CmsFeedAckDto"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsFeedAckView">
+		SELECT
+			t.id AS id,
+			t.time AS time,
+			t.lastupdate AS lastupdate,
+			t.STATUS AS STATUS,
+			t.is_del AS isDel,
+			t.feed_no AS feedNo,
+			t.admin_id AS adminId,
+			t.ack_time AS ackTime,
+			t.ack_content AS ackContent,
+			a.account AS adminAccount,
+			a.real_name AS adminRealName,
+			a.mobile AS adminMobile 
+		FROM
+			t_cms_feed_ack AS t
+			LEFT JOIN t_admin AS a ON t.admin_id = a.id 
+		WHERE
+			1 = 1 and t.is_del = 0
+		<if test="c_status != -10001">
+			and t.status = #{c_status}
+		</if>
+		<if
+			test="c_startTime != null and c_endTime != null
+		 	and c_startTime != '' and c_endTime != '' ">
+			and t.time <![CDATA[>=]]>
+			#{c_startTime} and t.time <![CDATA[<=]]>
+			#{c_endTime}
+		</if>
+	</select>
+
+	<select id="findViewById" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsFeedAckView">
+		SELECT
+			t.id AS id,
+			t.time AS time,
+			t.lastupdate AS lastupdate,
+			t.STATUS AS STATUS,
+			t.is_del AS isDel,
+			t.feed_no AS feedNo,
+			t.admin_id AS adminId,
+			t.ack_time AS ackTime,
+			t.ack_content AS ackContent,
+			a.account AS adminAccount,
+			a.real_name AS adminRealName,
+			a.mobile AS adminMobile 
+		FROM
+			t_cms_feed_ack AS t
+			LEFT JOIN t_admin AS a ON t.admin_id = a.id 
+		WHERE
+			1 = 1 and t.is_del = 0 and t.id = #{id}
+	</select>
+
+	<select id="listModelMap" parameterType="java.lang.Object"
+		resultType="com.longjun.cto.framework.sm.cms.entity.view.CmsFeedAckView">
+		SELECT
+			t.id AS id,
+			t.time AS time,
+			t.lastupdate AS lastupdate,
+			t.STATUS AS STATUS,
+			t.is_del AS isDel,
+			t.feed_no AS feedNo,
+			t.admin_id AS adminId,
+			t.ack_time AS ackTime,
+			t.ack_content AS ackContent,
+			a.account AS adminAccount,
+			a.real_name AS adminRealName,
+			a.mobile AS adminMobile 
+		FROM
+			t_cms_feed_ack AS t
+			LEFT JOIN t_admin AS a ON t.admin_id = a.id 
+		WHERE
+			1 = 1 and t.is_del = 0
+		<if test="c_status != null">
+			and t.status =#{c_status}
+		</if>
+		<if test="c_feed_no != null and c_feed_no !=''">
+			and t.feed_no =#{c_feed_no}
+		</if>
+		<if test="c_limit != null">
+			limit 0,#{c_limit}
+		</if>
+	</select>
+
+	<select id="countMap" parameterType="java.lang.Object"
+		resultType="java.lang.Integer">
+		SELECT
+		count(1)
+		FROM t_cms_feed_ack AS t
+		WHERE 1=1
+		<if test="c_status != -10001">
+			and t.status =#{c_status}
+		</if>
+	</select>
+
+	<update id="del" parameterType="java.lang.Long">
+		update t_cms_feed_ack set is_del
+		= 1
+		where id = #{id}
+	</update>
+
+</mapper>
