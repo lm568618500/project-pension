@@ -1,0 +1,12 @@
+2021-01-22 10:43:36.661 [http-nio-80-exec-1] ERROR com.longjun.cto.framework.sm.sys.service.ShiroService
+				Line:59  -
+				通过Token 查询AdminToken未查询到记录, token [2e00651a-cfd3-4674-9f82-22583f6afd32]
+2021-01-22 17:38:33.899 [http-nio-80-exec-2] ERROR com.longjun.cto.framework.sm.sys.service.impl.CommonVerificationServiceImpl
+				Line:225 -
+				验证码验证失败;未查询到code_type -> 10000 code_key -> 408dcb8a-c5d4-488b-83d7-e3d073ba719f  status-> 0 is_del-> 0数据
+2021-01-22 17:38:36.683 [http-nio-80-exec-6] ERROR com.longjun.cto.framework.sm.sys.service.impl.CommonVerificationServiceImpl
+				Line:225 -
+				验证码验证失败;未查询到code_type -> 10000 code_key -> 78d11646-07b5-45a1-ab5a-75466d116f3b  status-> 0 is_del-> 0数据
+2021-01-22 17:38:43.157 [http-nio-80-exec-3] ERROR com.longjun.cto.framework.sm.sys.service.ShiroService
+				Line:59  -
+				通过Token 查询AdminToken未查询到记录, token [70788bc7-c0ba-49f8-bf9a-12c7dac8e0b7]

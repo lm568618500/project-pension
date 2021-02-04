@@ -2306,7 +2306,7 @@ body {
   background-size: contain;
 }
 .page-title-box {
-  padding: 98px 0 60px;
+  padding: 58px 0 20px;
   text-align: center;
 }
 .page-title-box .title {
@@ -4247,7 +4247,7 @@ body {
   background: #ffffff url(../images/aboutbg2.png) no-repeat left bottom 100px;
 }
 .about-wrapper .mini-container {
-  padding-top: 100px;
+  padding-top: 0px;
 }
 .about-wrapper .box-1 {
   position: relative;

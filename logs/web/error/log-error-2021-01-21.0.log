@@ -1,0 +1,21 @@
+2021-01-21 09:06:59.037 [http-nio-80-exec-1] ERROR com.longjun.cto.framework.sm.sys.service.ShiroService
+				Line:59  -
+				通过Token 查询AdminToken未查询到记录, token [d1c3ca6c-6605-43b1-83d1-1ce6711bc031]
+2021-01-21 09:45:17.908 [http-nio-80-exec-1] ERROR com.longjun.cto.framework.sm.sys.service.ShiroService
+				Line:59  -
+				通过Token 查询AdminToken未查询到记录, token [b741dd50-37dd-4d18-b095-3ec42470d2c5]
+2021-01-21 13:41:27.334 [http-nio-80-exec-1] ERROR com.longjun.cto.framework.sm.sys.service.ShiroService
+				Line:59  -
+				通过Token 查询AdminToken未查询到记录, token [b9202030-8f30-44bf-a62f-b19d1d4e5861]
+2021-01-21 13:48:42.000 [http-nio-80-exec-4] ERROR com.longjun.cto.framework.project.pension.finance.service.impl.NewTypeFourServiceImpl
+				Line:140 -
+				NewTypeFour 修改失败;通过ID[null]未查询到数据
+2021-01-21 13:49:22.430 [http-nio-80-exec-4] ERROR com.longjun.cto.framework.project.pension.finance.service.impl.NewTypeFourServiceImpl
+				Line:140 -
+				NewTypeFour 修改失败;通过ID[null]未查询到数据
+2021-01-21 13:49:30.430 [http-nio-80-exec-6] ERROR com.longjun.cto.framework.project.pension.finance.service.impl.NewTypeFourServiceImpl
+				Line:140 -
+				NewTypeFour 修改失败;通过ID[null]未查询到数据
+2021-01-21 13:49:51.837 [http-nio-80-exec-2] ERROR com.longjun.cto.framework.project.pension.finance.service.impl.NewTypeFourServiceImpl
+				Line:140 -
+				NewTypeFour 修改失败;通过ID[null]未查询到数据

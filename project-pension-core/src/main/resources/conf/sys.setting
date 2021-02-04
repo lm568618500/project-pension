@@ -4,19 +4,19 @@ jobs=false
 lookip=true
 caches=buz-cache-standard*,buz-cache-ext*
 #Server地址.可用于ftl模板定义变量赋值。
-serverUrl=http://127.0.0.1
+serverUrl=http://192.168.3.98
 #静态资源地址;比如项目的js之类;可能是正向代理至res.domain.com中
 #staticServer=http://res.test1.shovesoft.com
-staticServer=http://127.0.0.1
+staticServer=http://192.168.3.98
 #静态资源地址;可偏向于cdn节点加速地址;
 #pubStaticServer=http://res.test1.shovesoft.com
-pubStaticServer=http://127.0.0.1
+pubStaticServer=http://192.168.3.98
 [oss]
 #0, "LOCAL" 1, "FASTDFS" 2, "七牛" 3, "阿里云"
 oss_type=1
 maxFileSize=100Mb
 maxRequestSize=100Mb
-localBaseUrl=127.0.0.1
+localBaseUrl=192.168.3.98
 preViewBaseUrl=http://fds.cto.shovesoft.com
 [passport]
 userPrimaryKey=l*k9qMCOECqMdogg
@@ -25,7 +25,7 @@ expireTokenKeyPrefix=expireToken
 expireTime=3600000
 refreshTokenExpire=86400000
 defaultClientId=10000001
-defaultcallBackUrl=http://127.0.0.1/mgn/sys/role/adminInitPage
+defaultcallBackUrl=http://192.168.3.98/mgn/sys/role/adminInitPage
 #defaultcallBackUrl=http://d6.cto.shovesoft.com/mgn/index
 passwordSercret=$hci3cxUYwgqn8afkGgaIgUVbJaS!gaA
 single=true
@@ -44,7 +44,7 @@ xssExcludedUrl=/*
 #排除地址
 referesExcludedUrl=
 #可访问地址
-allowsReferesUrl=null,127.0.0.1,localhost,
+allowsReferesUrl=null,192.168.3.98,localhost,
 #文件过滤地址
 fileFilterUrls=/image/download,
 [file]

@@ -13,14 +13,14 @@ import com.eims.cto.framework.module.base.model.BaseModel;
 public class NewsModel extends BaseModel<NewsModel> {
 
 	private static final long serialVersionUID = 1610157315661L;
-	
-	
+
+
 	/**
 	 * 一级菜单id
 	 */
 	@TableField("type_one_id")
 	private Long typeOneId;
-	
+
 	/**
 	 * 二级菜单id
 	 */

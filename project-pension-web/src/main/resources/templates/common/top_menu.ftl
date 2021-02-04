@@ -87,7 +87,7 @@
                 <a href="javascript:;">${oneWebList.name!}</a>
                 <div class="nav">
                     <#list oneWebList.twoList as  twoList>
-                        <a class href="/about/index.html">${twoList.name!}</a>
+                        <a class href="${serverPath}/jw/news?oneId=${oneWebList.id!}&twoId=${twoList.id!}&threeId=0&fourId=0&newId=0">${twoList.name!}</a>
                     </#list>
                 </div>
             </li>

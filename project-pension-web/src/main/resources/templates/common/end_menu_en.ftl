@@ -6,10 +6,10 @@
             <ul>
                 <#list oneWebList as oneWebList>
                     <li>
-                        <a href="javascript:;" class="cat"${oneWebList.nameEn!}</a>
+                        <a href="javascript:;" class="cat">${oneWebList.nameEn!}</a>
                         <div class="nav">
                             <#list oneWebList.twoList as  twoList>
-                                <a class href="${serverPath}/jw/news?oneId=${oneWebList.id!}&twoId=${twoList.id!}&threeId=0&fourId=0&newId=0">${twoList.name!}</a>
+                                <a class href="${serverPath}/jw/news?oneId=${oneWebList.id!}&twoId=${twoList.id!}&threeId=0&fourId=0&newId=0">${twoList.nameEn!}</a>
                             </#list>
                         </div>
                     </li>
@@ -41,7 +41,8 @@
 
                 </div>
             </div>
-            <div class="copy">Copyright © 2020 <br>${GlobalMap['COMPANY_NAME']} <br><a href="http://beian.miit.gov.cn/">粤ICP备号</a></div>
+            <div class="copy">Copyright © 2021 <br>${GlobalMap['COMPANY_NAME']} <br><a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2021015056号-1
+                </a></div>
         </div>
     </div>
 </div>

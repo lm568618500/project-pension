@@ -1,4 +1,6 @@
 <@override name="body">
+<script type="text/javascript" src="${PubStaticServer}/static/JRoll/jroll.js"></script>
+<script type="text/javascript" src="${PubStaticServer}/static/JRoll/jroll-viewer.js"></script>
   <div class="box-container-fluid header-wrapper">
   <@extends name="//common/top_menu.ftl"/>
   <!-- banner start -->
@@ -33,13 +35,16 @@
   </div>
   <!-- 二级栏目 end -->
   <!-- 项目展示 start -->
-  <div class="box-container-fluid page-box equipment-wrapper  caseinfo-wrapper  ">
+  <div class="box-container-fluid page-box <#if twoId!=24 && twoId!=19>equipment-wrapper </#if> caseinfo-wrapper <#if twoId==22> about-wrapper</#if> <#if twoId==24>culture-wrapper</#if>
+  <#if twoId==19>people-wrapper</#if>
+  ">
     <div class="container">
-      <div class="mini-container">
+      <div class="mini-container" >
         <div class="page-title-box wow fadeInUp50">
           <div class="title">${two.name!}</div>
           <p>${two.nameEn!}</p>
         </div>
+        <#if threeList?size&gt;0>
         <div class="page-category-box wow fadeInUp50">
           <div class="inner">
             <#list  threeList as threeList>
@@ -47,6 +52,7 @@
             </#list>
           </div>
         </div>
+        </#if>
         <#if fourSize&gt;0>
           <div class="page-cat-box wow fadeInUp50">
             <ul id="seriesConditionType">
@@ -118,7 +124,7 @@
 
             </div></br>
          </#if>
-        <div class="detail-box">
+        <div id="div1">
           ${news.conten!}
         </div>
         </#if>
@@ -159,7 +165,7 @@
 
             </div></br>
           </#if>
-        <div class="detail-box">
+        <div id="div1">
           ${news.conten!}
         </div>
         </#if>
@@ -203,9 +209,13 @@
   <script type="text/javascript" src="${PubStaticServer}/static/jw/js/wow.min.js"></script>
   <script type="text/javascript" src="${PubStaticServer}/static/jw/js/smooth.js"></script>
   <script type="text/javascript" src="${PubStaticServer}/static/jw/js/common.js"></script>
-
   <link href="${PubStaticServer}/static/jw/css/Sdialog.css" rel="stylesheet">
   <script src="${PubStaticServer}/static/jw/js/message.js"></script>
+  <script>
+    var viewer = new JRollViewer('#div1')
+  </script>
+
+
   <script>
     var swiper = new Swiper('.thumbs-swiper', {
       navigation: {

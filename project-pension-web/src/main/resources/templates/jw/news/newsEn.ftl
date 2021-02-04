@@ -3,7 +3,7 @@
   <@extends name="//common/top_menu_en.ftl"/>
   <!-- banner start -->
   <div class="page-banner-wrapepr">
-    <img src="${one.imageBanner!}" alt class="banner">
+    <img src="${one.imageBanner!}" alt class="banner" >
   </div>
 
   <!-- 二级栏目 start -->
@@ -19,7 +19,6 @@
           <#list twoList as twoList>
           <a <#if twoList.id==twoId> class="on" </#if> href="${serverPath}/jw/newsEn?oneId=${one.id!}&twoId=${twoList.id!}&threeId=0&fourId=0&newId=0">${twoList.nameEn!}</a>
           </#list>
-
         </div>
       </div>
       <div class="breadcrumb">
@@ -33,9 +32,11 @@
   </div>
   <!-- 二级栏目 end -->
   <!-- 项目展示 start -->
-  <div class="box-container-fluid page-box equipment-wrapper  caseinfo-wrapper  ">
+  <div class="box-container-fluid page-box <#if twoId!=24 && twoId!=19>equipment-wrapper </#if> caseinfo-wrapper <#if twoId==22> about-wrapper</#if> <#if twoId==24>culture-wrapper</#if>
+  <#if twoId==19>people-wrapper</#if>
+  ">
     <div class="container">
-      <div class="mini-container">
+      <div class="mini-container" id="layer-photos-demo">
         <div class="page-title-box wow fadeInUp50">
           <div class="title">${two.nameEn!}</div>
           <p>${two.nameEn!}</p>
@@ -203,9 +204,26 @@
   <script type="text/javascript" src="${PubStaticServer}/static/jw/js/wow.min.js"></script>
   <script type="text/javascript" src="${PubStaticServer}/static/jw/js/smooth.js"></script>
   <script type="text/javascript" src="${PubStaticServer}/static/jw/js/common.js"></script>
-
+  <script type="text/javascript" src="${PubStaticServer}/static/layui/layui.js"></script>
   <link href="${PubStaticServer}/static/jw/css/Sdialog.css" rel="stylesheet">
   <script src="${PubStaticServer}/static/jw/js/message.js"></script>
+  <script>
+
+    layui.use(['form', 'jquery', 'layer', 'laydate', 'layedit'], function () {
+      var form = layui.form,
+              $ = layui.jquery,
+              layer = layui.layer,
+              laydate = layui.laydate;
+      layedit = layui.layedit;
+
+
+      //点击图片放大
+      layer.photos({
+        photos: '#layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+      });
+    });
+  </script>
   <script>
     var swiper = new Swiper('.thumbs-swiper', {
       navigation: {

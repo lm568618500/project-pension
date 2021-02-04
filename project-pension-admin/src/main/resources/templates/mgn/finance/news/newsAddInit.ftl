@@ -134,7 +134,7 @@
            layedit = layui.layedit;
 		   layedit.set({
 				uploadImage: {
-					url: '${serverPath}/mgn/sys/uploadLayedit',
+					url: '${serverPath}/mgn/sys/uploadLayeditEdit',
 					type: 'POST' //默认post
 				}
 		   });

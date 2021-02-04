@@ -1,6 +1,8 @@
 package com.longjun.cto.framework.project.pension.base;
 
 import com.eims.cto.framework.common.base.ret.ActionResult;
+import com.longjun.cto.framework.sm.cms.entity.model.ImageModel;
+import com.longjun.cto.framework.sm.cms.service.IImageService;
 import com.longjun.cto.framework.sm.sys.entity.view.OssResSaveView;
 import com.longjun.cto.framework.sm.sys.service.OssService;
 import org.apache.commons.io.IOUtils;
@@ -34,6 +36,8 @@ import java.util.Map;
 public class UploadController {
 	@Autowired
 	private OssService ossService;
+	@Autowired
+	IImageService imageService;
 	@ResponseBody
 	@PostMapping("/upload")
 	public ActionResult<OssResSaveView> upload(@RequestParam(name = "file") MultipartFile[] file,
@@ -55,7 +59,22 @@ public class UploadController {
 		datas.put("data", data);
 		return datas;
 	}
+	@ResponseBody
+	@PostMapping("/uploadLayeditEdit")
+	public Map<String, Object> uploadLayeditEdit(@RequestParam(name = "file") MultipartFile file,
+											 @RequestParam(required = false, defaultValue = "1") int typeOss) throws IOException {
+		ImageModel rets = this.imageService.save(file);
+		Map<String, Object> datas = new HashMap<String, Object>();
+		datas.put("code", "0");
+		datas.put("msg", "上传成功");
+		Map<String, String> data = new HashMap<String, String>();
+		data.put("src", rets.getUrl());
+		data.put("title", "");
+		datas.put("data", data);
 
+
+		return datas;
+	}
 	@RequestMapping(value = "/download")
 	@ResponseBody
 	public void downloadImg(HttpServletResponse response,HttpServletRequest request,String path) {
