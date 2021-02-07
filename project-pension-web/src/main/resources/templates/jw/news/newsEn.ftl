@@ -98,7 +98,7 @@
                 <div class="swiper-container goodspic-swiper">
                   <div class="swiper-wrapper">
 
-                    <div class="swiper-slide"><img src="${serverPath}/common/image?id=${images1!}" alt=""></div>
+                    <div class="swiper-slide class1"><img  id="imagess" src="${serverPath}/common/image?id=${images1!}" alt=""></div>
 
                   </div>
                   <div class="swiper-pagination"></div>
@@ -109,7 +109,7 @@
                 <div class="swiper-container thumbs-swiper">
                   <div class="swiper-wrapper">
                     <#list imagesList as imagesList>
-                      <div class="swiper-slide"><img  id="imagess" src="${serverPath}/common/image?id=${imagesList!}" alt="" onclick="onImg(this)"></div>
+                      <div class="swiper-slide"><img  src="${serverPath}/common/image?id=${imagesList!}" alt="" onclick="onImg(this)"></div>
                     </#list>
                   </div>
                 </div>
@@ -139,7 +139,7 @@
                 <div class="swiper-container goodspic-swiper">
                   <div class="swiper-wrapper">
 
-                    <div class="swiper-slide"><img id="imagess" src="${serverPath}/common/image?id=${images1!}" alt=""></div>
+                    <div class="swiper-slide class2"><img id="imagess" src="${serverPath}/common/image?id=${images1!}" alt=""></div>
 
                   </div>
                   <div class="swiper-pagination"></div>
@@ -170,7 +170,17 @@
     </div>
   </div>
   <!-- 项目展示 end -->
-
+  <div class="box-container-fluid pic-modal-box">
+    <div class="box">
+      <div class="w1200">
+        <div class="top">
+          <a href="javascript:;" class="close" onclick="picModalBox()">&times;</a>
+          <div class="name"></div>
+        </div>
+        <div class="pic-box"><img src="#" alt=""></div>
+      </div>
+    </div>
+  </div>
 
   <@extends name="//common/end_menu_en.ftl"/>
 
@@ -207,6 +217,22 @@
   <script type="text/javascript" src="${PubStaticServer}/static/layui/layui.js"></script>
   <link href="${PubStaticServer}/static/jw/css/Sdialog.css" rel="stylesheet">
   <script src="${PubStaticServer}/static/jw/js/message.js"></script>
+  <script>
+    function picModalBox(obj) {
+      if (obj) {
+        var src = $(obj).find("img").attr("src")
+        $(".pic-modal-box .name").text($(obj).find(".name").text())
+        $(".pic-modal-box img").attr("src", src)
+        $(".mask").show()
+        $(".pic-modal-box").fadeIn(300)
+      } else {
+        $(".pic-modal-box").fadeOut(300)
+        setTimeout(function () {
+          $(".mask").fadeOut(600)
+        }, 500)
+      }
+    }
+  </script>
   <script>
 
     layui.use(['form', 'jquery', 'layer', 'laydate', 'layedit'], function () {
