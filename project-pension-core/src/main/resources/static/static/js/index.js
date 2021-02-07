@@ -2,7 +2,7 @@ var $,tab,dataStr,layer;
 layui.config({
 	//base : "/js/"
 	//base: '/static/js/' //假设这是你存放拓展模块的根目录
-	base: 'http://127.0.0.1/static/js/' //假设这是你存放拓展模块的根目录
+	base: '/static/js/' //假设这是你存放拓展模块的根目录
 }).extend({
 	authtree: 'authtree',
 	"bodyTab" : "bodyTab"
